@@ -37,7 +37,6 @@
             box-shadow: 0 20px 60px rgba(0, 20, 40, 0.08);
         }
 
-        /* HEADER */
         .header {
             display: flex;
             justify-content: space-between;
@@ -93,7 +92,6 @@
             gap: 8px;
         }
 
-        /* INTRO */
         .intro-section {
             background: linear-gradient(135deg, rgba(255, 138, 101, 0.08), rgba(129, 212, 250, 0.08));
             border-radius: 20px;
@@ -118,14 +116,12 @@
         }
 
         .intro-section p strong {
-            color: #1a2634;
             background: linear-gradient(135deg, #ff8a65, #ff6e40);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        /* TABS */
         .tabs-wrapper {
             display: flex;
             gap: 12px;
@@ -171,11 +167,6 @@
             font-weight: 700;
         }
 
-        .tab-btn.active .count {
-            background: rgba(255,255,255,0.25);
-        }
-
-        /* PANELS */
         .panels-container {
             background: rgba(255, 255, 255, 0.5);
             border-radius: 24px;
@@ -237,7 +228,7 @@
             padding-bottom: 14px;
         }
 
-        /* ===== REAL IMAGE DEMO ===== */
+        /* REAL IMAGE DEMO */
         .visual-demo {
             background: rgba(255, 255, 255, 0.6);
             border-radius: 18px;
@@ -280,7 +271,7 @@
 
         .demo-card .image-wrap {
             width: 100%;
-            height: 120px;
+            height: 130px;
             overflow: hidden;
             background: #f0f0f0;
             position: relative;
@@ -325,20 +316,7 @@
             margin-top: 4px;
         }
 
-        .demo-card .info .tag-produk {
-            display: inline-block;
-            font-size: 0.55rem;
-            font-weight: 700;
-            background: rgba(129, 212, 250, 0.2);
-            color: #0288d1;
-            padding: 2px 10px;
-            border-radius: 100px;
-            margin-top: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* ===== PRODUCT GRID ===== */
+        /* PRODUCT GRID */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -372,12 +350,12 @@
             margin-bottom: 8px;
         }
 
-        .product-card .icon-wrap.orange { background: rgba(255, 138, 101, 0.12); color: #ff6e40; }
         .product-card .icon-wrap.blue { background: rgba(129, 212, 250, 0.15); color: #0288d1; }
-        .product-card .icon-wrap.green { background: rgba(165, 214, 167, 0.25); color: #388e3c; }
         .product-card .icon-wrap.purple { background: rgba(206, 147, 216, 0.2); color: #7b1fa2; }
-        .product-card .icon-wrap.pink { background: rgba(244, 143, 177, 0.15); color: #c2185b; }
         .product-card .icon-wrap.cyan { background: rgba(128, 222, 234, 0.2); color: #00838f; }
+        .product-card .icon-wrap.green { background: rgba(165, 214, 167, 0.25); color: #388e3c; }
+        .product-card .icon-wrap.pink { background: rgba(244, 143, 177, 0.15); color: #c2185b; }
+        .product-card .icon-wrap.orange { background: rgba(255, 138, 101, 0.12); color: #ff6e40; }
         .product-card .icon-wrap.yellow { background: rgba(255, 236, 179, 0.5); color: #f57f17; }
 
         .product-card .level-tag {
@@ -424,7 +402,7 @@
             margin-right: 6px;
         }
 
-        /* ===== PROCESS ===== */
+        /* PROCESS */
         .process-timeline {
             display: flex;
             flex-direction: column;
@@ -485,7 +463,7 @@
             margin-top: 4px;
         }
 
-        /* ===== ATTITUDE ===== */
+        /* ATTITUDE */
         .attitude-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -582,7 +560,6 @@
         .attitude-card .sikap-tag.psikomotor { background: rgba(165, 214, 167, 0.25); color: #2e7d32; }
         .attitude-card .sikap-tag.sosial { background: rgba(255, 236, 179, 0.5); color: #f57f17; }
 
-        /* BOTTOM */
         .bottom-note {
             margin-top: 20px;
             padding: 14px 20px;
@@ -614,7 +591,6 @@
             color: #e65100;
         }
 
-        /* SIMULASI INTERAKTIF */
         .simulation-box {
             background: linear-gradient(135deg, #fff8f5, #fff3e0);
             border-radius: 16px;
@@ -660,7 +636,6 @@
             box-shadow: 0 4px 16px rgba(255, 110, 64, 0.3);
         }
 
-        /* RESPONSIF */
         @media (max-width: 820px) {
             .container { padding: 20px; }
             .header h1 { font-size: 1.4rem; }
@@ -690,7 +665,6 @@
 
 <div class="container">
 
-    <!-- HEADER -->
     <div class="header">
         <div class="header-left">
             <div class="icon-badge"><i class="fas fa-flask"></i></div>
@@ -701,7 +675,6 @@
         </div>
     </div>
 
-    <!-- INTRO -->
     <div class="intro-section">
         <span class="emoji-big">🚀</span>
         <p>
@@ -712,7 +685,6 @@
         </p>
     </div>
 
-    <!-- TABS -->
     <div class="tabs-wrapper">
         <button class="tab-btn active" data-tab="tab-produk">
             <i class="fas fa-database"></i> Produk <span class="count">7</span>
@@ -725,7 +697,6 @@
         </button>
     </div>
 
-    <!-- PANELS -->
     <div class="panels-container">
 
         <!-- ===== PANEL PRODUK ===== -->
@@ -738,18 +709,16 @@
             </div>
             <div class="sub">Pengetahuan terstruktur dari yang paling dasar hingga paling kompleks.</div>
 
-            <!-- SIMULASI INTERAKTIF -->
             <div class="simulation-box">
                 <span class="sim-icon">🔬</span>
                 <div class="sim-text">
-                    <strong>Simulasi:</strong> Klik kartu produk di bawah untuk melihat contoh nyata dalam kehidupan sehari-hari!
+                    <strong>Simulasi:</strong> Klik kartu produk di bawah untuk melihat contoh nyata dalam fisika!
                 </div>
                 <button class="sim-btn" onclick="alert('🔍 Coba klik kartu produk di bawah untuk melihat contohnya!')">
                     <i class="fas fa-play"></i> Mulai Simulasi
                 </button>
             </div>
 
-            <!-- REAL IMAGE DEMO - PRODUK -->
             <div class="visual-demo">
                 <div class="demo-title">
                     <i class="fas fa-image" style="color:#ff6e40;"></i> 
@@ -758,39 +727,38 @@
                 <div class="demo-grid">
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=400&h=200&fit=crop&crop=center" alt="Pembiasan cahaya">
+                            <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=400&h=200&fit=crop&crop=center" alt="Pembiasan cahaya di laboratorium">
                         </div>
                         <div class="info">
                             <div class="label">Pembiasan Cahaya</div>
                             <div class="desc">Pensil dalam air tampak patah → <strong>Konsep</strong> Fisika</div>
-                            <span class="tag-produk">Konsep</span>
+                            <span class="badge-visual">Konsep</span>
                         </div>
                     </div>
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://images.unsplash.com/photo-1614308452090-3c3f1f7f1b1b?w=400&h=200&fit=crop&crop=center" alt="Model Atom">
+                            <img src="https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=400&h=200&fit=crop&crop=center" alt="Model atom modern">
                         </div>
                         <div class="info">
-                            <div class="label">Model Atom Bohr</div>
+                            <div class="label">Model Atom</div>
                             <div class="desc">Representasi struktur atom → <strong>Model</strong> Fisika</div>
-                            <span class="tag-produk">Model</span>
+                            <span class="badge-visual">Model</span>
                         </div>
                     </div>
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://images.unsplash.com/photo-1533093818119-ac1fa2a1cf4e?w=400&h=200&fit=crop&crop=center" alt="Rumus Fisika">
+                            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=200&fit=crop&crop=center" alt="Rumus fisika di papan tulis">
                         </div>
                         <div class="info">
                             <div class="label">Hukum Newton II</div>
                             <div class="desc">F = m·a → <strong>Rumus</strong> Fisika</div>
-                            <span class="tag-produk">Rumus</span>
+                            <span class="badge-visual">Rumus</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="product-grid">
-                <!-- 1. FAKTA -->
                 <div class="product-card">
                     <div class="icon-wrap blue"><i class="fas fa-list-ul"></i></div>
                     <span class="level-tag dasar">Dasar</span>
@@ -799,7 +767,6 @@
                     <div class="example"><i class="fas fa-check-circle"></i> "Air mendidih pada 100°C di permukaan laut."</div>
                 </div>
 
-                <!-- 2. KONSEP -->
                 <div class="product-card">
                     <div class="icon-wrap purple"><i class="fas fa-project-diagram"></i></div>
                     <span class="level-tag dasar">Dasar</span>
@@ -808,7 +775,6 @@
                     <div class="example"><i class="fas fa-check-circle"></i> Konsep <strong>gaya</strong>, <strong>energi</strong>, <strong>massa</strong>.</div>
                 </div>
 
-                <!-- 3. PRINSIP -->
                 <div class="product-card">
                     <div class="icon-wrap cyan"><i class="fas fa-arrow-right"></i></div>
                     <span class="level-tag menengah">Menengah</span>
@@ -817,7 +783,6 @@
                     <div class="example"><i class="fas fa-check-circle"></i> "Semakin besar gaya, semakin besar percepatan."</div>
                 </div>
 
-                <!-- 4. HUKUM -->
                 <div class="product-card">
                     <div class="icon-wrap green"><i class="fas fa-gavel"></i></div>
                     <span class="level-tag menengah">Menengah</span>
@@ -826,7 +791,6 @@
                     <div class="example"><i class="fas fa-check-circle"></i> Hukum I Newton, Hukum Kekekalan Energi.</div>
                 </div>
 
-                <!-- 5. TEORI -->
                 <div class="product-card">
                     <div class="icon-wrap pink"><i class="fas fa-brain"></i></div>
                     <span class="level-tag tinggi">Tinggi</span>
@@ -835,7 +799,6 @@
                     <div class="example"><i class="fas fa-check-circle"></i> Teori Relativitas Einstein.</div>
                 </div>
 
-                <!-- 6. MODEL -->
                 <div class="product-card">
                     <div class="icon-wrap orange"><i class="fas fa-cube"></i></div>
                     <span class="level-tag tinggi">Tinggi</span>
@@ -844,7 +807,6 @@
                     <div class="example"><i class="fas fa-check-circle"></i> Model Atom Bohr.</div>
                 </div>
 
-                <!-- 7. RUMUS -->
                 <div class="product-card">
                     <div class="icon-wrap yellow"><i class="fas fa-calculator"></i></div>
                     <span class="level-tag tertinggi">Tertinggi</span>
@@ -865,18 +827,16 @@
             </div>
             <div class="sub">Langkah sistematis untuk membangun dan menguji pengetahuan fisika.</div>
 
-            <!-- SIMULASI INTERAKTIF -->
             <div class="simulation-box">
                 <span class="sim-icon">🧪</span>
                 <div class="sim-text">
                     <strong>Simulasi:</strong> Ikuti langkah-langkah metode ilmiah seperti ilmuwan sungguhan!
                 </div>
-                <button class="sim-btn" onclick="alert('🔬 Proses ilmiah dimulai dari observasi, hipotesis, eksperimen, analisis, hingga publikasi!')">
+                <button class="sim-btn" onclick="alert('🔬 Proses ilmiah: Observasi → Hipotesis → Eksperimen → Analisis → Publikasi!')">
                     <i class="fas fa-play"></i> Mulai Simulasi
                 </button>
             </div>
 
-            <!-- REAL IMAGE DEMO - PROSES -->
             <div class="visual-demo">
                 <div class="demo-title">
                     <i class="fas fa-play-circle" style="color:#ff6e40;"></i> 
@@ -885,32 +845,32 @@
                 <div class="demo-grid">
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=200&fit=crop&crop=center" alt="Eksperimen di laboratorium">
+                            <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=200&fit=crop&crop=center" alt="Ilmuwan melakukan eksperimen di laboratorium">
                         </div>
                         <div class="info">
                             <div class="label">Eksperimen</div>
                             <div class="desc">Ilmuwan melakukan <strong>eksperimen</strong> berulang untuk menguji hipotesis</div>
-                            <span class="tag-produk">Proses</span>
+                            <span class="badge-visual">Proses</span>
                         </div>
                     </div>
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center" alt="Analisis data">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center" alt="Analisis data dan grafik">
                         </div>
                         <div class="info">
                             <div class="label">Analisis Data</div>
                             <div class="desc">Mengolah dan menginterpretasi data hasil eksperimen</div>
-                            <span class="tag-produk">Proses</span>
+                            <span class="badge-visual">Proses</span>
                         </div>
                     </div>
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=200&fit=crop&crop=center" alt="Publikasi ilmiah">
+                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=200&fit=crop&crop=center" alt="Presentasi dan publikasi ilmiah">
                         </div>
                         <div class="info">
                             <div class="label">Publikasi</div>
                             <div class="desc">Menyebarkan temuan melalui jurnal atau konferensi</div>
-                            <span class="tag-produk">Proses</span>
+                            <span class="badge-visual">Proses</span>
                         </div>
                     </div>
                 </div>
@@ -970,7 +930,6 @@
             </div>
             <div class="sub">Sikap ilmiah adalah fondasi yang membuat fisika berkembang. <strong style="color:#ff6e40;">Klik kartu</strong> untuk melihat contoh!</div>
 
-            <!-- SIMULASI INTERAKTIF -->
             <div class="simulation-box">
                 <span class="sim-icon">🧠</span>
                 <div class="sim-text">
@@ -981,7 +940,6 @@
                 </button>
             </div>
 
-            <!-- REAL IMAGE DEMO - SIKAP -->
             <div class="visual-demo">
                 <div class="demo-title">
                     <i class="fas fa-users" style="color:#ff6e40;"></i> 
@@ -990,39 +948,38 @@
                 <div class="demo-grid">
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=200&fit=crop&crop=center" alt="Kerja sama tim">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=200&fit=crop&crop=center" alt="Tim peneliti bekerja sama">
                         </div>
                         <div class="info">
                             <div class="label">Kerja Sama</div>
                             <div class="desc">Ilmuwan <strong>bekerja sama</strong> dan saling menghargai pendapat</div>
-                            <span class="tag-produk">Sikap Sosial</span>
+                            <span class="badge-visual">Sikap Sosial</span>
                         </div>
                     </div>
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?w=400&h=200&fit=crop&crop=center" alt="Rasa ingin tahu">
+                            <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?w=400&h=200&fit=crop&crop=center" alt="Ilmuwan mengamati dengan mikroskop">
                         </div>
                         <div class="info">
                             <div class="label">Rasa Ingin Tahu</div>
                             <div class="desc">Dorongan untuk <strong>bertanya</strong> dan mencari tahu</div>
-                            <span class="tag-produk">Sikap Kognitif</span>
+                            <span class="badge-visual">Sikap Kognitif</span>
                         </div>
                     </div>
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=200&fit=crop&crop=center" alt="Kejujuran akademik">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=200&fit=crop&crop=center" alt="Menulis laporan ilmiah">
                         </div>
                         <div class="info">
                             <div class="label">Kejujuran</div>
                             <div class="desc"><strong>Objektif</strong> dan jujur terhadap data penelitian</div>
-                            <span class="tag-produk">Sikap Afektif</span>
+                            <span class="badge-visual">Sikap Afektif</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="attitude-grid">
-                <!-- 1 -->
                 <div class="attitude-card" data-attitude="1">
                     <span class="emoji-big">🔍</span>
                     <h3>Rasa Ingin Tahu</h3>
@@ -1032,7 +989,6 @@
                     <span class="click-hint">👆 klik</span>
                 </div>
 
-                <!-- 2 -->
                 <div class="attitude-card" data-attitude="2">
                     <span class="emoji-big">⚖️</span>
                     <h3>Objektif & Jujur</h3>
@@ -1042,7 +998,6 @@
                     <span class="click-hint">👆 klik</span>
                 </div>
 
-                <!-- 3 -->
                 <div class="attitude-card" data-attitude="3">
                     <span class="emoji-big">🤝</span>
                     <h3>Terbuka & Kritis</h3>
@@ -1052,7 +1007,6 @@
                     <span class="click-hint">👆 klik</span>
                 </div>
 
-                <!-- 4 -->
                 <div class="attitude-card" data-attitude="4">
                     <span class="emoji-big">🧪</span>
                     <h3>Tekun & Ulet</h3>
@@ -1062,7 +1016,6 @@
                     <span class="click-hint">👆 klik</span>
                 </div>
 
-                <!-- 5 -->
                 <div class="attitude-card" data-attitude="5">
                     <span class="emoji-big">📊</span>
                     <h3>Teliti & Cermat</h3>
@@ -1072,7 +1025,6 @@
                     <span class="click-hint">👆 klik</span>
                 </div>
 
-                <!-- 6 -->
                 <div class="attitude-card" data-attitude="6">
                     <span class="emoji-big">💡</span>
                     <h3>Kreatif & Inovatif</h3>
@@ -1082,7 +1034,6 @@
                     <span class="click-hint">👆 klik</span>
                 </div>
 
-                <!-- 7 -->
                 <div class="attitude-card" data-attitude="7">
                     <span class="emoji-big">🧩</span>
                     <h3>Logis & Sistematis</h3>
@@ -1092,7 +1043,6 @@
                     <span class="click-hint">👆 klik</span>
                 </div>
 
-                <!-- 8 -->
                 <div class="attitude-card" data-attitude="8">
                     <span class="emoji-big">🤔</span>
                     <h3>Ragu yang Sehat</h3>
@@ -1102,7 +1052,6 @@
                     <span class="click-hint">👆 klik</span>
                 </div>
 
-                <!-- 9 -->
                 <div class="attitude-card" data-attitude="9">
                     <span class="emoji-big">🗣️</span>
                     <h3>Komunikatif</h3>
@@ -1112,7 +1061,6 @@
                     <span class="click-hint">👆 klik</span>
                 </div>
 
-                <!-- 10 -->
                 <div class="attitude-card" data-attitude="10">
                     <span class="emoji-big">🔄</span>
                     <h3>Berpikir Dinamis</h3>
@@ -1122,7 +1070,6 @@
                     <span class="click-hint">👆 klik</span>
                 </div>
 
-                <!-- 11 -->
                 <div class="attitude-card" data-attitude="11">
                     <span class="emoji-big">🎯</span>
                     <h3>Fokus & Konsentrasi</h3>
@@ -1132,7 +1079,6 @@
                     <span class="click-hint">👆 klik</span>
                 </div>
 
-                <!-- 12 -->
                 <div class="attitude-card" data-attitude="12">
                     <span class="emoji-big">🌍</span>
                     <h3>Bertanggung Jawab</h3>
@@ -1145,7 +1091,6 @@
         </div>
     </div>
 
-    <!-- BOTTOM NOTE -->
     <div class="bottom-note">
         <i class="fas fa-circle-info"></i>
         <span>
@@ -1159,7 +1104,6 @@
 </div>
 
 <script>
-    // ===== TAB SYSTEM =====
     const tabBtns = document.querySelectorAll('.tab-btn');
     const panels = document.querySelectorAll('.panel');
 
@@ -1174,7 +1118,6 @@
         });
     });
 
-    // ===== ATTITUDE CARDS (click to toggle detail) =====
     const attitudeCards = document.querySelectorAll('.attitude-card');
 
     attitudeCards.forEach(card => {
