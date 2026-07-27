@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hakikat Fisika: Produk, Proses, Sikap</title>
+    <title>Hakikat Fisika - Produk, Proses, Sikap</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 
         * {
             margin: 0;
@@ -15,29 +15,29 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: #0b1120;
-            color: #e8edf5;
+            font-family: 'Quicksand', sans-serif;
+            background: #f0f7ff;
+            color: #1a2634;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
             background-image: 
-                radial-gradient(ellipse at 20% 50%, rgba(56, 189, 248, 0.08) 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
+                radial-gradient(circle at 10% 20%, rgba(255, 183, 77, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(129, 212, 250, 0.15) 0%, transparent 50%);
         }
 
         .container {
             max-width: 1150px;
             width: 100%;
-            background: rgba(17, 24, 39, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-radius: 40px;
             padding: 32px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 60px rgba(0, 20, 40, 0.08);
         }
 
         /* HEADER */
@@ -59,71 +59,74 @@
         .header-left .icon-badge {
             width: 52px;
             height: 52px;
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            background: linear-gradient(135deg, #ff8a65, #ff6e40);
             border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.6rem;
             color: white;
-            box-shadow: 0 8px 24px -6px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 8px 24px -4px rgba(255, 110, 64, 0.3);
         }
 
         .header h1 {
-            font-size: 1.9rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #f0f9ff, #bae6fd);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a2634;
             letter-spacing: -0.5px;
         }
 
+        .header h1 span {
+            background: linear-gradient(135deg, #ff8a65, #ff6e40);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .header .tagline {
-            background: rgba(56, 189, 248, 0.12);
-            border: 1px solid rgba(56, 189, 248, 0.15);
+            background: rgba(255, 138, 101, 0.12);
+            border: 1px solid rgba(255, 138, 101, 0.2);
             padding: 8px 20px;
             border-radius: 100px;
             font-size: 0.8rem;
             font-weight: 600;
-            color: #7dd3fc;
+            color: #e65100;
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
         .header .tagline i {
-            color: #38bdf8;
+            color: #ff8a65;
         }
 
         /* INTRO */
         .intro-section {
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(124, 58, 237, 0.08));
+            background: linear-gradient(135deg, rgba(255, 138, 101, 0.08), rgba(129, 212, 250, 0.08));
             border-radius: 20px;
             padding: 18px 24px;
             margin-bottom: 28px;
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 138, 101, 0.08);
             display: flex;
             align-items: center;
             gap: 16px;
             flex-wrap: wrap;
         }
 
-        .intro-section i {
-            font-size: 2rem;
-            color: #818cf8;
+        .intro-section .emoji-big {
+            font-size: 2.4rem;
         }
 
         .intro-section p {
             font-size: 1.05rem;
-            color: #cbd5e1;
+            color: #37474f;
             line-height: 1.6;
             flex: 1;
         }
 
         .intro-section p strong {
-            color: #f1f5f9;
-            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            color: #1a2634;
+            background: linear-gradient(135deg, #ff8a65, #ff6e40);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -140,9 +143,9 @@
             flex: 1;
             padding: 16px 12px;
             border: none;
-            background: rgba(30, 41, 59, 0.5);
+            background: rgba(200, 215, 230, 0.3);
             border-radius: 16px;
-            color: #94a3b8;
+            color: #546e7a;
             font-family: inherit;
             font-weight: 600;
             font-size: 0.95rem;
@@ -152,7 +155,7 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            border: 1px solid transparent;
+            border: 2px solid transparent;
         }
 
         .tab-btn i {
@@ -160,19 +163,19 @@
         }
 
         .tab-btn:hover {
-            background: rgba(51, 65, 85, 0.6);
-            color: #e2e8f0;
+            background: rgba(255, 138, 101, 0.08);
+            color: #1a2634;
         }
 
         .tab-btn.active {
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            background: linear-gradient(135deg, #ff8a65, #ff6e40);
             color: white;
-            box-shadow: 0 8px 28px -8px rgba(37, 99, 235, 0.35);
-            border-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 28px -4px rgba(255, 110, 64, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
         }
 
         .tab-btn .count {
-            background: rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.2);
             padding: 0 10px;
             border-radius: 100px;
             font-size: 0.7rem;
@@ -180,21 +183,21 @@
         }
 
         .tab-btn.active .count {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.25);
         }
 
         /* PANELS */
         .panels-container {
-            background: rgba(15, 23, 42, 0.4);
+            background: rgba(255, 255, 255, 0.5);
             border-radius: 24px;
             padding: 28px;
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.6);
             min-height: 400px;
         }
 
         .panel {
             display: none;
-            animation: fadeSlide 0.45s ease forwards;
+            animation: fadeSlide 0.5s ease forwards;
         }
 
         .panel.active {
@@ -202,7 +205,7 @@
         }
 
         @keyframes fadeSlide {
-            from { opacity: 0; transform: translateY(12px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
@@ -222,12 +225,12 @@
         }
 
         .panel-header .pill {
-            background: rgba(56, 189, 248, 0.15);
+            background: rgba(255, 138, 101, 0.12);
             padding: 4px 16px;
             border-radius: 100px;
             font-size: 0.7rem;
             font-weight: 600;
-            color: #7dd3fc;
+            color: #e65100;
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
@@ -235,32 +238,33 @@
         .panel h2 {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #f1f5f9;
+            color: #1a2634;
         }
 
         .panel .sub {
-            color: #94a3b8;
+            color: #546e7a;
             font-size: 0.95rem;
             margin-bottom: 22px;
-            border-bottom: 1px solid rgba(255,255,255,0.04);
+            border-bottom: 1px solid rgba(0,0,0,0.04);
             padding-bottom: 16px;
         }
 
         /* ===== PRODUK GRID ===== */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
             gap: 16px;
         }
 
         .product-card {
-            background: rgba(15, 23, 42, 0.6);
+            background: white;
             border-radius: 18px;
             padding: 20px;
-            border: 1px solid rgba(255,255,255,0.04);
-            transition: all 0.25s ease;
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
             cursor: default;
             position: relative;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.02);
         }
 
         .product-card::before {
@@ -269,8 +273,8 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            height: 4px;
+            background: linear-gradient(90deg, #ff8a65, #ff6e40);
             opacity: 0;
             transition: opacity 0.3s;
             border-radius: 18px 18px 0 0;
@@ -281,9 +285,9 @@
         }
 
         .product-card:hover {
-            background: rgba(30, 58, 95, 0.4);
-            border-color: rgba(56, 189, 248, 0.15);
-            transform: translateY(-3px);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(255, 138, 101, 0.12);
+            border-color: rgba(255, 138, 101, 0.15);
         }
 
         .product-card .icon-wrap {
@@ -297,16 +301,16 @@
             margin-bottom: 10px;
         }
 
-        .product-card .icon-wrap.blue { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
-        .product-card .icon-wrap.purple { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
-        .product-card .icon-wrap.green { background: rgba(52, 211, 153, 0.15); color: #34d399; }
-        .product-card .icon-wrap.orange { background: rgba(251, 146, 60, 0.15); color: #fb923c; }
-        .product-card .icon-wrap.pink { background: rgba(244, 114, 182, 0.15); color: #f472b6; }
-        .product-card .icon-wrap.cyan { background: rgba(6, 182, 212, 0.15); color: #22d3ee; }
-        .product-card .icon-wrap.yellow { background: rgba(234, 179, 8, 0.15); color: #fbbf24; }
+        .product-card .icon-wrap.orange { background: rgba(255, 138, 101, 0.12); color: #ff6e40; }
+        .product-card .icon-wrap.blue { background: rgba(129, 212, 250, 0.15); color: #0288d1; }
+        .product-card .icon-wrap.green { background: rgba(165, 214, 167, 0.25); color: #388e3c; }
+        .product-card .icon-wrap.purple { background: rgba(206, 147, 216, 0.2); color: #7b1fa2; }
+        .product-card .icon-wrap.pink { background: rgba(244, 143, 177, 0.15); color: #c2185b; }
+        .product-card .icon-wrap.cyan { background: rgba(128, 222, 234, 0.2); color: #00838f; }
+        .product-card .icon-wrap.yellow { background: rgba(255, 236, 179, 0.5); color: #f57f17; }
 
         .product-card .level-tag {
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             font-weight: 700;
@@ -316,36 +320,36 @@
             margin-bottom: 8px;
         }
 
-        .product-card .level-tag.dasar { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
-        .product-card .level-tag.menengah { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
-        .product-card .level-tag.tinggi { background: rgba(251, 146, 60, 0.15); color: #fb923c; }
-        .product-card .level-tag.tertinggi { background: rgba(52, 211, 153, 0.15); color: #34d399; }
+        .product-card .level-tag.dasar { background: rgba(129, 212, 250, 0.2); color: #0288d1; }
+        .product-card .level-tag.menengah { background: rgba(206, 147, 216, 0.2); color: #7b1fa2; }
+        .product-card .level-tag.tinggi { background: rgba(255, 138, 101, 0.15); color: #e65100; }
+        .product-card .level-tag.tertinggi { background: rgba(165, 214, 167, 0.3); color: #2e7d32; }
 
         .product-card h3 {
             font-weight: 700;
             font-size: 1.1rem;
-            color: #f1f5f9;
+            color: #1a2634;
             margin-bottom: 4px;
         }
 
         .product-card p {
             font-size: 0.9rem;
-            color: #94a3b8;
+            color: #546e7a;
             line-height: 1.5;
         }
 
         .product-card .example {
             margin-top: 10px;
-            background: rgba(0,0,0,0.25);
+            background: rgba(0,0,0,0.02);
             padding: 8px 12px;
             border-radius: 10px;
             font-size: 0.85rem;
-            color: #cbd5e1;
-            border-left: 3px solid #38bdf8;
+            color: #1a2634;
+            border-left: 3px solid #ff8a65;
         }
 
         .product-card .example i {
-            color: #38bdf8;
+            color: #ff6e40;
             margin-right: 6px;
         }
 
@@ -360,22 +364,25 @@
             display: flex;
             align-items: flex-start;
             gap: 18px;
-            background: rgba(15, 23, 42, 0.4);
+            background: white;
             padding: 14px 20px;
             border-radius: 16px;
-            border-left: 4px solid #818cf8;
-            transition: 0.2s;
+            border-left: 4px solid #ff8a65;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
         }
 
         .process-step:hover {
-            background: rgba(30, 58, 138, 0.2);
+            background: rgba(255, 138, 101, 0.04);
+            transform: translateX(6px);
+            box-shadow: 0 4px 16px rgba(255, 138, 101, 0.06);
         }
 
         .process-step .num {
             width: 32px;
             height: 32px;
             min-width: 32px;
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            background: linear-gradient(135deg, #ff8a65, #ff6e40);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -387,12 +394,12 @@
 
         .process-step .content h4 {
             font-weight: 600;
-            color: #f1f5f9;
+            color: #1a2634;
             font-size: 1rem;
         }
 
         .process-step .content p {
-            color: #94a3b8;
+            color: #546e7a;
             font-size: 0.9rem;
             line-height: 1.5;
             margin-top: 2px;
@@ -400,8 +407,8 @@
 
         .process-step .content .mini-example {
             font-size: 0.8rem;
-            color: #7dd3fc;
-            background: rgba(56, 189, 248, 0.06);
+            color: #e65100;
+            background: rgba(255, 138, 101, 0.08);
             padding: 4px 12px;
             border-radius: 100px;
             display: inline-block;
@@ -411,44 +418,45 @@
         /* ===== SIKAP GRID ===== */
         .attitude-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 14px;
         }
 
         .attitude-card {
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 20px;
-            padding: 20px 16px;
+            background: white;
+            border-radius: 18px;
+            padding: 18px 14px;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.04);
+            border: 1px solid rgba(0,0,0,0.04);
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
         }
 
         .attitude-card:hover {
-            background: rgba(30, 58, 95, 0.3);
-            border-color: rgba(56, 189, 248, 0.15);
             transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(255, 138, 101, 0.08);
+            border-color: rgba(255, 138, 101, 0.15);
         }
 
         .attitude-card .emoji-big {
-            font-size: 2.4rem;
-            margin-bottom: 8px;
+            font-size: 2.2rem;
+            margin-bottom: 6px;
             display: block;
         }
 
         .attitude-card h3 {
             font-weight: 700;
-            color: #f1f5f9;
-            font-size: 1rem;
+            color: #1a2634;
+            font-size: 0.95rem;
         }
 
         .attitude-card .desc {
-            font-size: 0.85rem;
-            color: #94a3b8;
-            margin: 6px 0 10px;
-            line-height: 1.5;
+            font-size: 0.8rem;
+            color: #546e7a;
+            margin: 4px 0 8px;
+            line-height: 1.4;
         }
 
         .attitude-card .detail {
@@ -456,31 +464,31 @@
             overflow: hidden;
             transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
             opacity: 0;
-            background: rgba(0,0,0,0.25);
+            background: rgba(255, 138, 101, 0.04);
             border-radius: 12px;
             padding: 0 12px;
             margin-top: 0;
             text-align: left;
-            font-size: 0.82rem;
-            color: #cbd5e1;
-            border-left: 3px solid #38bdf8;
+            font-size: 0.8rem;
+            color: #1a2634;
+            border-left: 3px solid #ff8a65;
         }
 
         .attitude-card .detail i {
-            color: #4ade80;
+            color: #4caf50;
             margin-right: 6px;
         }
 
         .attitude-card.active .detail {
             max-height: 200px;
             opacity: 1;
-            padding: 12px;
-            margin-top: 10px;
+            padding: 10px 12px;
+            margin-top: 8px;
         }
 
         .attitude-card .click-hint {
-            font-size: 0.65rem;
-            color: #64748b;
+            font-size: 0.6rem;
+            color: #b0bec5;
             display: block;
             margin-top: 4px;
         }
@@ -490,7 +498,7 @@
         }
 
         .attitude-card .sikap-tag {
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             font-weight: 700;
@@ -500,41 +508,41 @@
             margin-top: 4px;
         }
 
-        .attitude-card .sikap-tag.kognitif { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
-        .attitude-card .sikap-tag.afektif { background: rgba(244, 114, 182, 0.15); color: #f472b6; }
-        .attitude-card .sikap-tag.psikomotor { background: rgba(52, 211, 153, 0.15); color: #34d399; }
-        .attitude-card .sikap-tag.sosial { background: rgba(251, 146, 60, 0.15); color: #fb923c; }
+        .attitude-card .sikap-tag.kognitif { background: rgba(129, 212, 250, 0.2); color: #0277bd; }
+        .attitude-card .sikap-tag.afektif { background: rgba(244, 143, 177, 0.15); color: #c2185b; }
+        .attitude-card .sikap-tag.psikomotor { background: rgba(165, 214, 167, 0.25); color: #2e7d32; }
+        .attitude-card .sikap-tag.sosial { background: rgba(255, 236, 179, 0.5); color: #f57f17; }
 
         /* BOTTOM */
         .bottom-note {
             margin-top: 24px;
             padding: 16px 20px;
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.4);
             border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.04);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             display: flex;
             align-items: center;
             gap: 14px;
             flex-wrap: wrap;
             font-size: 0.9rem;
-            color: #94a3b8;
+            color: #546e7a;
         }
 
         .bottom-note i {
-            color: #818cf8;
+            color: #ff8a65;
             font-size: 1.2rem;
         }
 
         .bottom-note strong {
-            color: #e2e8f0;
+            color: #1a2634;
         }
 
         .bottom-note .pill-ref {
-            background: rgba(99, 102, 241, 0.12);
+            background: rgba(255, 138, 101, 0.08);
             padding: 4px 14px;
             border-radius: 100px;
             font-size: 0.7rem;
-            color: #a5b4fc;
+            color: #e65100;
         }
 
         /* RESPONSIF */
@@ -556,6 +564,7 @@
             .attitude-grid { grid-template-columns: 1fr; }
             .header-left .icon-badge { width: 40px; height: 40px; font-size: 1.2rem; }
             .panel h2 { font-size: 1.2rem; }
+            .header .tagline { font-size: 0.7rem; padding: 6px 14px; }
         }
     </style>
 </head>
@@ -567,7 +576,7 @@
     <div class="header">
         <div class="header-left">
             <div class="icon-badge"><i class="fas fa-flask"></i></div>
-            <h1>Hakikat Fisika</h1>
+            <h1>Hakikat <span>Fisika</span></h1>
         </div>
         <div class="tagline">
             <i class="fas fa-bolt"></i> Produk · Proses · Sikap
@@ -576,12 +585,12 @@
 
     <!-- INTRO -->
     <div class="intro-section">
-        <i class="fas fa-quote-left"></i>
+        <span class="emoji-big">🚀</span>
         <p>
             Hakikat Fisika adalah <strong>tiga dimensi</strong> yang saling terkait: 
             <strong>Produk</strong> (pengetahuan), <strong>Proses</strong> (metode ilmiah), 
             dan <strong>Sikap</strong> (karakter ilmuwan). 
-            Yuk, eksplorasi satu per satu!
+            <span style="color:#ff6e40;">Klik dan jelajahi!</span>
         </p>
     </div>
 
@@ -605,11 +614,11 @@
         <div id="tab-produk" class="panel active">
             <div class="panel-header">
                 <div class="left">
-                    <h2>📦 Fisika sebagai Produk</h2>
+                    <h2>📦 Produk Fisika</h2>
                     <span class="pill">7 Elemen Pengetahuan</span>
                 </div>
             </div>
-            <div class="sub">Kumpulan pengetahuan terstruktur yang terus berkembang dari yang paling dasar hingga paling kompleks.</div>
+            <div class="sub">Pengetahuan terstruktur dari yang paling dasar hingga paling kompleks.</div>
 
             <div class="product-grid">
                 <!-- 1. FAKTA -->
@@ -644,22 +653,22 @@
                     <div class="icon-wrap green"><i class="fas fa-gavel"></i></div>
                     <span class="level-tag menengah">Menengah</span>
                     <h3>Hukum</h3>
-                    <p>Generalisasi yang berlaku universal, telah teruji berulang kali, dan dinyatakan dalam bentuk matematis.</p>
+                    <p>Generalisasi universal, teruji berulang kali, dinyatakan dalam bentuk matematis.</p>
                     <div class="example"><i class="fas fa-check-circle"></i> Hukum I Newton (Kelembaman), Hukum Kekekalan Energi.</div>
                 </div>
 
                 <!-- 5. TEORI -->
                 <div class="product-card">
-                    <div class="icon-wrap orange"><i class="fas fa-brain"></i></div>
+                    <div class="icon-wrap pink"><i class="fas fa-brain"></i></div>
                     <span class="level-tag tinggi">Tinggi</span>
                     <h3>Teori</h3>
-                    <p>Penjelasan komprehensif yang didukung oleh banyak bukti dan mampu memprediksi fenomena baru.</p>
+                    <p>Penjelasan komprehensif didukung banyak bukti dan mampu memprediksi fenomena baru.</p>
                     <div class="example"><i class="fas fa-check-circle"></i> Teori Relativitas Einstein, Teori Kinetik Gas.</div>
                 </div>
 
                 <!-- 6. MODEL -->
                 <div class="product-card">
-                    <div class="icon-wrap pink"><i class="fas fa-cube"></i></div>
+                    <div class="icon-wrap orange"><i class="fas fa-cube"></i></div>
                     <span class="level-tag tinggi">Tinggi</span>
                     <h3>Model</h3>
                     <p>Representasi visual atau matematis dari suatu fenomena untuk memudahkan pemahaman.</p>
@@ -672,7 +681,7 @@
                     <span class="level-tag tertinggi">Tertinggi</span>
                     <h3>Rumus / Formula</h3>
                     <p>Ekspresi matematis yang memungkinkan perhitungan dan prediksi kuantitatif.</p>
-                    <div class="example"><i class="fas fa-check-circle"></i> F = m·a, E = mc², v = s/t</div>
+                    <div class="example"><i class="fas fa-check-circle"></i> <strong>F = m·a</strong>, E = mc², v = s/t</div>
                 </div>
             </div>
         </div>
@@ -681,7 +690,7 @@
         <div id="tab-proses" class="panel">
             <div class="panel-header">
                 <div class="left">
-                    <h2>🔬 Fisika sebagai Proses</h2>
+                    <h2>🔬 Proses Fisika</h2>
                     <span class="pill">Metode Ilmiah</span>
                 </div>
             </div>
@@ -692,7 +701,7 @@
                     <div class="num">1</div>
                     <div class="content">
                         <h4>Observasi & Identifikasi Masalah</h4>
-                        <p>Mengamati fenomena alam dengan seksama dan merumuskan pertanyaan ilmiah yang ingin dijawab.</p>
+                        <p>Mengamati fenomena alam dengan seksama dan merumuskan pertanyaan ilmiah.</p>
                         <span class="mini-example"><i class="fas fa-lightbulb"></i> "Mengapa benda jatuh ke bawah?" — Galileo</span>
                     </div>
                 </div>
@@ -700,7 +709,7 @@
                     <div class="num">2</div>
                     <div class="content">
                         <h4>Merumuskan Hipotesis</h4>
-                        <p>Dugaan sementara yang logis dan dapat diuji melalui eksperimen atau observasi lebih lanjut.</p>
+                        <p>Dugaan sementara yang logis dan dapat diuji melalui eksperimen atau observasi.</p>
                         <span class="mini-example"><i class="fas fa-lightbulb"></i> "Bumi menarik semua benda dengan gaya gravitasi."</span>
                     </div>
                 </div>
@@ -708,8 +717,8 @@
                     <div class="num">3</div>
                     <div class="content">
                         <h4>Eksperimen & Pengumpulan Data</h4>
-                        <p>Melakukan percobaan terkontrol, mengukur variabel, dan mengumpulkan data secara akurat.</p>
-                        <span class="mini-example"><i class="fas fa-lightbulb"></i> Menjatuhkan benda dengan massa berbeda dari ketinggian yang sama.</span>
+                        <p>Melakukan percobaan terkontrol, mengukur variabel, dan mengumpulkan data akurat.</p>
+                        <span class="mini-example"><i class="fas fa-lightbulb"></i> Menjatuhkan benda dengan massa berbeda dari ketinggian sama.</span>
                     </div>
                 </div>
                 <div class="process-step">
@@ -724,8 +733,8 @@
                     <div class="num">5</div>
                     <div class="content">
                         <h4>Komunikasi & Publikasi</h4>
-                        <p>Menyebarkan temuan melalui jurnal, konferensi, atau diskusi untuk dikaji oleh komunitas ilmiah.</p>
-                        <span class="mini-example"><i class="fas fa-lightbulb"></i> Publikasi di jurnal Nature, presentasi di konferensi fisika.</span>
+                        <p>Menyebarkan temuan melalui jurnal, konferensi, atau diskusi untuk dikaji komunitas.</p>
+                        <span class="mini-example"><i class="fas fa-lightbulb"></i> Publikasi di jurnal ilmiah, presentasi di konferensi.</span>
                     </div>
                 </div>
             </div>
@@ -735,11 +744,11 @@
         <div id="tab-sikap" class="panel">
             <div class="panel-header">
                 <div class="left">
-                    <h2>🧠 Fisika sebagai Sikap</h2>
+                    <h2>🧠 Sikap Ilmiah</h2>
                     <span class="pill">12 Karakter Ilmuwan</span>
                 </div>
             </div>
-            <div class="sub">Sikap ilmiah adalah fondasi yang membuat fisika berkembang. <strong>Klik kartu</strong> untuk melihat contoh!</div>
+            <div class="sub">Sikap ilmiah adalah fondasi yang membuat fisika berkembang. <strong style="color:#ff6e40;">Klik kartu</strong> untuk melihat contoh!</div>
 
             <div class="attitude-grid">
                 <!-- 1 -->
@@ -747,9 +756,9 @@
                     <span class="emoji-big">🔍</span>
                     <h3>Rasa Ingin Tahu</h3>
                     <span class="sikap-tag kognitif">Kognitif</span>
-                    <div class="desc">Dorongan untuk bertanya, mencari tahu, dan tidak puas dengan jawaban dangkal.</div>
-                    <div class="detail"><i class="fas fa-check-circle"></i> "Mengapa langit berwarna biru? Bagaimana cara kerja pesawat terbang?"</div>
-                    <span class="click-hint">👆 klik untuk contoh</span>
+                    <div class="desc">Dorongan bertanya dan mencari tahu.</div>
+                    <div class="detail"><i class="fas fa-check-circle"></i> "Mengapa langit berwarna biru? Bagaimana pesawat terbang?"</div>
+                    <span class="click-hint">👆 klik</span>
                 </div>
 
                 <!-- 2 -->
@@ -757,9 +766,9 @@
                     <span class="emoji-big">⚖️</span>
                     <h3>Objektif & Jujur</h3>
                     <span class="sikap-tag afektif">Afektif</span>
-                    <div class="desc">Menerima fakta apa adanya, tidak memanipulasi data, dan mengakui keterbatasan.</div>
-                    <div class="detail"><i class="fas fa-check-circle"></i> Melaporkan hasil eksperimen sesuai data, meskipun tidak sesuai hipotesis awal.</div>
-                    <span class="click-hint">👆 klik untuk contoh</span>
+                    <div class="desc">Menerima fakta, tidak memanipulasi data.</div>
+                    <div class="detail"><i class="fas fa-check-circle"></i> Melaporkan hasil eksperimen sesuai data, meskipun tidak sesuai hipotesis.</div>
+                    <span class="click-hint">👆 klik</span>
                 </div>
 
                 <!-- 3 -->
@@ -767,9 +776,9 @@
                     <span class="emoji-big">🤝</span>
                     <h3>Terbuka & Kritis</h3>
                     <span class="sikap-tag sosial">Sosial</span>
-                    <div class="desc">Menghargai pendapat lain, mau mengubah pandangan, dan selalu mempertanyakan bukti.</div>
+                    <div class="desc">Menghargai pendapat lain, mempertanyakan bukti.</div>
                     <div class="detail"><i class="fas fa-check-circle"></i> Diskusi ilmiah, peer review, revisi teori berdasarkan data baru.</div>
-                    <span class="click-hint">👆 klik untuk contoh</span>
+                    <span class="click-hint">👆 klik</span>
                 </div>
 
                 <!-- 4 -->
@@ -777,9 +786,9 @@
                     <span class="emoji-big">🧪</span>
                     <h3>Tekun & Ulet</h3>
                     <span class="sikap-tag psikomotor">Psikomotor</span>
-                    <div class="desc">Tidak mudah menyerah, mau mencoba berulang kali untuk mendapatkan hasil yang akurat.</div>
+                    <div class="desc">Tidak mudah menyerah, mencoba berulang.</div>
                     <div class="detail"><i class="fas fa-check-circle"></i> Mengulang eksperimen berkali-kali untuk memastikan konsistensi data.</div>
-                    <span class="click-hint">👆 klik untuk contoh</span>
+                    <span class="click-hint">👆 klik</span>
                 </div>
 
                 <!-- 5 -->
@@ -787,9 +796,9 @@
                     <span class="emoji-big">📊</span>
                     <h3>Teliti & Cermat</h3>
                     <span class="sikap-tag psikomotor">Psikomotor</span>
-                    <div class="desc">Memperhatikan detail, melakukan pengukuran dengan presisi, dan menghindari kesalahan.</div>
-                    <div class="detail"><i class="fas fa-check-circle"></i> Membaca skala alat ukur dengan benar, mencatat data dengan lengkap.</div>
-                    <span class="click-hint">👆 klik untuk contoh</span>
+                    <div class="desc">Memperhatikan detail, pengukuran presisi.</div>
+                    <div class="detail"><i class="fas fa-check-circle"></i> Membaca skala alat ukur dengan benar, mencatat data lengkap.</div>
+                    <span class="click-hint">👆 klik</span>
                 </div>
 
                 <!-- 6 -->
@@ -797,9 +806,9 @@
                     <span class="emoji-big">💡</span>
                     <h3>Kreatif & Inovatif</h3>
                     <span class="sikap-tag kognitif">Kognitif</span>
-                    <div class="desc">Mampu menemukan cara baru, pendekatan alternatif, dan solusi kreatif.</div>
+                    <div class="desc">Menemukan cara baru, pendekatan alternatif.</div>
                     <div class="detail"><i class="fas fa-check-circle"></i> Merancang alat eksperimen sederhana, menemukan analogi baru.</div>
-                    <span class="click-hint">👆 klik untuk contoh</span>
+                    <span class="click-hint">👆 klik</span>
                 </div>
 
                 <!-- 7 -->
@@ -807,9 +816,9 @@
                     <span class="emoji-big">🧩</span>
                     <h3>Logis & Sistematis</h3>
                     <span class="sikap-tag kognitif">Kognitif</span>
-                    <div class="desc">Berpikir terstruktur, mengikuti langkah-langkah yang runtut dan masuk akal.</div>
-                    <div class="detail"><i class="fas fa-check-circle"></i> Menyusun prosedur eksperimen yang sistematis, menarik kesimpulan secara logis.</div>
-                    <span class="click-hint">👆 klik untuk contoh</span>
+                    <div class="desc">Berpikir terstruktur, langkah runtut.</div>
+                    <div class="detail"><i class="fas fa-check-circle"></i> Menyusun prosedur eksperimen sistematis, kesimpulan logis.</div>
+                    <span class="click-hint">👆 klik</span>
                 </div>
 
                 <!-- 8 -->
@@ -817,9 +826,9 @@
                     <span class="emoji-big">🤔</span>
                     <h3>Ragu yang Sehat</h3>
                     <span class="sikap-tag kognitif">Kognitif</span>
-                    <div class="desc">Tidak mudah percaya pada klaim tanpa bukti, mempertanyakan hasil yang meragukan.</div>
+                    <div class="desc">Tidak mudah percaya tanpa bukti.</div>
                     <div class="detail"><i class="fas fa-check-circle"></i> Memverifikasi ulang data yang aneh, mencari sumber referensi tambahan.</div>
-                    <span class="click-hint">👆 klik untuk contoh</span>
+                    <span class="click-hint">👆 klik</span>
                 </div>
 
                 <!-- 9 -->
@@ -827,9 +836,9 @@
                     <span class="emoji-big">🗣️</span>
                     <h3>Komunikatif</h3>
                     <span class="sikap-tag sosial">Sosial</span>
-                    <div class="desc">Mampu menyampaikan ide, hasil, dan pemikiran dengan jelas kepada orang lain.</div>
-                    <div class="detail"><i class="fas fa-check-circle"></i> Mempresentasikan hasil penelitian, menulis laporan ilmiah yang runtut.</div>
-                    <span class="click-hint">👆 klik untuk contoh</span>
+                    <div class="desc">Menyampaikan ide dengan jelas.</div>
+                    <div class="detail"><i class="fas fa-check-circle"></i> Mempresentasikan hasil penelitian, menulis laporan ilmiah runtut.</div>
+                    <span class="click-hint">👆 klik</span>
                 </div>
 
                 <!-- 10 -->
@@ -837,9 +846,9 @@
                     <span class="emoji-big">🔄</span>
                     <h3>Berpikir Dinamis</h3>
                     <span class="sikap-tag kognitif">Kognitif</span>
-                    <div class="desc">Menyadari bahwa pengetahuan terus berkembang dan siap memperbarui pemahaman.</div>
+                    <div class="desc">Sadar pengetahuan terus berkembang.</div>
                     <div class="detail"><i class="fas fa-check-circle"></i> Menerima teori baru yang lebih baik, tidak terpaku pada dogma lama.</div>
-                    <span class="click-hint">👆 klik untuk contoh</span>
+                    <span class="click-hint">👆 klik</span>
                 </div>
 
                 <!-- 11 -->
@@ -847,9 +856,9 @@
                     <span class="emoji-big">🎯</span>
                     <h3>Fokus & Konsentrasi</h3>
                     <span class="sikap-tag psikomotor">Psikomotor</span>
-                    <div class="desc">Mampu memusatkan perhatian pada tugas dan menghindari distraksi.</div>
+                    <div class="desc">Memusatkan perhatian pada tugas.</div>
                     <div class="detail"><i class="fas fa-check-circle"></i> Melakukan pengamatan dengan fokus, menjaga konsentrasi saat eksperimen.</div>
-                    <span class="click-hint">👆 klik untuk contoh</span>
+                    <span class="click-hint">👆 klik</span>
                 </div>
 
                 <!-- 12 -->
@@ -857,9 +866,9 @@
                     <span class="emoji-big">🌍</span>
                     <h3>Bertanggung Jawab</h3>
                     <span class="sikap-tag sosial">Sosial</span>
-                    <div class="desc">Menyadari dampak ilmu fisika bagi masyarakat dan lingkungan, bertindak etis.</div>
+                    <div class="desc">Menyadari dampak ilmu, bertindak etis.</div>
                     <div class="detail"><i class="fas fa-check-circle"></i> Menggunakan ilmu untuk kebaikan, memperhatikan keselamatan kerja di lab.</div>
-                    <span class="click-hint">👆 klik untuk contoh</span>
+                    <span class="click-hint">👆 klik</span>
                 </div>
             </div>
         </div>
@@ -869,11 +878,11 @@
     <div class="bottom-note">
         <i class="fas fa-circle-info"></i>
         <span>
-            <strong>Ketiga dimensi</strong> ini tidak berdiri sendiri. 
-            Seorang ilmuwan menggunakan <strong>proses</strong> untuk menghasilkan <strong>produk</strong>, 
+            <strong>Ketiga dimensi</strong> ini saling terkait: 
+            Ilmuwan menggunakan <strong>proses</strong> untuk menghasilkan <strong>produk</strong>, 
             dan semua itu dilandasi oleh <strong>sikap</strong> ilmiah.
         </span>
-        <span class="pill-ref">Ref: Modul Fisika Kelas X</span>
+        <span class="pill-ref">Modul Fisika Kelas X</span>
     </div>
 
 </div>
@@ -902,9 +911,6 @@
             this.classList.toggle('active');
         });
     });
-
-    // Auto-open first card as example (uncomment if desired)
-    // attitudeCards[0].classList.add('active');
 </script>
 
 </body>
