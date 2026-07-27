@@ -1,395 +1,639 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hakikat Fisika · Kelas X Interaktif</title>
-  <!-- Font & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakikat Fisika Interaktif</title>
+    <!-- Font dan Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Import Font Google */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f5f9ff;
-      color: #0b1a33;
-      padding: 2rem 1.5rem;
-      line-height: 1.6;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f172a; /* Warna latar gelap modern */
+            color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-image: radial-gradient(circle at 10% 20%, rgba(30, 58, 138, 0.3) 0%, transparent 50%);
+        }
 
-    /* header */
-    .header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
-      border-bottom: 2px solid #d0e2ff;
-      padding-bottom: 1rem;
-    }
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 40px;
+            padding: 30px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-    .header h1 {
-      font-weight: 700;
-      font-size: 2.2rem;
-      background: linear-gradient(145deg, #0b2b5e, #1b4a8b);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: -0.5px;
-    }
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
 
-    .header .badge {
-      background: #1b4a8b;
-      color: white;
-      padding: 0.4rem 1.2rem;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      box-shadow: 0 6px 12px rgba(0, 40, 100, 0.15);
-    }
+        .header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
 
-    .subhead {
-      background: white;
-      border-radius: 24px;
-      padding: 1.5rem 2rem;
-      margin-bottom: 2.2rem;
-      box-shadow: 0 8px 20px rgba(0, 20, 60, 0.06);
-      border-left: 6px solid #2b6bb0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      align-items: center;
-    }
+        .header h1 i {
+            background: none;
+            -webkit-text-fill-color: #38bdf8;
+            margin-right: 10px;
+        }
 
-    .subhead i {
-      font-size: 2.2rem;
-      color: #1b4a8b;
-    }
+        .badge {
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 10px 20px;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #7dd3fc;
+            backdrop-filter: blur(5px);
+        }
 
-    .subhead p {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: #1e3a6b;
-      flex: 1;
-    }
+        .badge i {
+            margin-right: 8px;
+            color: #38bdf8;
+        }
 
-    .subhead .quote {
-      font-weight: 400;
-      background: #eef4ff;
-      padding: 0.4rem 1.2rem;
-      border-radius: 30px;
-      font-size: 0.95rem;
-      color: #1a3f73;
-    }
+        /* Grid Utama */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 30px;
+            margin-top: 10px;
+        }
 
-    /* grid cards */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.8rem;
-      margin-top: 0.5rem;
-    }
+        /* Kartu Profil / Gambar */
+        .profile-card {
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 30px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
 
-    .card {
-      background: #ffffff;
-      border-radius: 28px;
-      padding: 1.8rem 1.6rem 2rem;
-      box-shadow: 0 8px 24px rgba(0, 30, 70, 0.06);
-      transition: all 0.2s ease;
-      border: 1px solid #e7efff;
-      display: flex;
-      flex-direction: column;
-    }
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 32px rgba(18, 52, 106, 0.10);
-      border-color: #b8d0f0;
-    }
+        .profile-card .icon-big {
+            font-size: 5rem;
+            color: #38bdf8;
+            margin-bottom: 15px;
+            background: rgba(56, 189, 248, 0.1);
+            padding: 20px;
+            border-radius: 50%;
+            border: 2px dashed rgba(56, 189, 248, 0.3);
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .card-icon {
-      font-size: 2.4rem;
-      color: #1b4a8b;
-      margin-bottom: 0.8rem;
-    }
+        .profile-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #f8fafc;
+        }
 
-    .card h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: -0.3px;
-      margin-bottom: 0.75rem;
-      color: #0a1e3c;
-    }
+        .profile-card p {
+            color: #94a3b8;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
 
-    .card p {
-      color: #1f3a60;
-      margin-bottom: 1rem;
-      font-weight: 400;
-      flex: 1;
-    }
+        .profile-card .highlight-box {
+            background: rgba(99, 102, 241, 0.15);
+            border-left: 4px solid #818cf8;
+            padding: 12px 15px;
+            border-radius: 12px;
+            width: 100%;
+            text-align: left;
+        }
 
-    .card ul {
-      padding-left: 1.2rem;
-      margin: 0.5rem 0 1.2rem;
-      color: #1f3a60;
-    }
+        .profile-card .highlight-box strong {
+            color: #c7d2fe;
+        }
 
-    .card ul li {
-      margin-bottom: 0.4rem;
-      list-style-type: '✦ ';
-      padding-left: 0.3rem;
-    }
+        .profile-card .highlight-box i {
+            color: #818cf8;
+            margin-right: 8px;
+        }
 
-    .card .btn {
-      display: inline-block;
-      background: #e3edff;
-      color: #13418a;
-      font-weight: 600;
-      padding: 0.5rem 1.2rem;
-      border-radius: 40px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      align-self: flex-start;
-      transition: 0.15s;
-      border: 1px solid transparent;
-    }
+        /* Area Konten Interaktif */
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
 
-    .card .btn i {
-      margin-right: 6px;
-    }
+        /* Tab Navigasi */
+        .tabs {
+            display: flex;
+            background: rgba(15, 23, 42, 0.7);
+            border-radius: 18px;
+            padding: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
 
-    .card .btn:hover {
-      background: #1b4a8b;
-      color: white;
-      border-color: #1b4a8b;
-    }
+        .tab-btn {
+            flex: 1;
+            padding: 14px 10px;
+            border: none;
+            background: transparent;
+            color: #94a3b8;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
 
-    .highlight {
-      background: #eef4ff;
-      border-radius: 16px;
-      padding: 1.2rem 1.5rem;
-      margin: 1.2rem 0 0.8rem;
-      border-left: 4px solid #2b6bb0;
-    }
+        .tab-btn i {
+            font-size: 1rem;
+        }
 
-    .highlight strong {
-      color: #0b2b5e;
-    }
+        .tab-btn:hover {
+            color: #e2e8f0;
+            background: rgba(255, 255, 255, 0.05);
+        }
 
-    .sumber {
-      margin-top: 2.5rem;
-      background: #ffffffd9;
-      backdrop-filter: blur(2px);
-      border-radius: 28px;
-      padding: 1.8rem 2rem;
-      border: 1px solid #dbe7fc;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-    }
+        .tab-btn.active {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            box-shadow: 0 8px 20px -8px rgba(37, 99, 235, 0.4);
+        }
 
-    .sumber h4 {
-      font-weight: 600;
-      color: #123a70;
-      margin-bottom: 0.8rem;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+        /* Panel Konten */
+        .tab-panels {
+            background: rgba(30, 41, 59, 0.4);
+            border-radius: 24px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            min-height: 300px;
+        }
 
-    .sumber a {
-      color: #1655a5;
-      text-decoration: none;
-      font-weight: 500;
-      border-bottom: 1px dotted #b3cbea;
-    }
+        .panel {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
 
-    .sumber a:hover {
-      border-bottom: 2px solid #1b4a8b;
-    }
+        .panel.active {
+            display: block;
+        }
 
-    .sumber .ref-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 1.8rem;
-    }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-    .ref-list span {
-      background: #f0f6ff;
-      padding: 0.2rem 0.8rem;
-      border-radius: 30px;
-      font-size: 0.85rem;
-    }
+        .panel h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #f1f5f9;
+        }
 
-    .footer-note {
-      margin-top: 2.8rem;
-      font-size: 0.9rem;
-      color: #42639b;
-      text-align: center;
-      border-top: 1px solid #dbe3f0;
-      padding-top: 1.8rem;
-    }
+        .panel h3 i {
+            margin-right: 12px;
+            color: #38bdf8;
+        }
 
-    @media (max-width: 600px) {
-      body { padding: 1rem; }
-      .header h1 { font-size: 1.8rem; }
-      .subhead { flex-direction: column; align-items: flex-start; }
-    }
-  </style>
+        .panel .subtitle {
+            color: #94a3b8;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 15px;
+        }
+
+        .panel .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .feature-item {
+            background: rgba(15, 23, 42, 0.5);
+            padding: 18px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.2s ease;
+            cursor: default;
+        }
+
+        .feature-item:hover {
+            background: rgba(56, 189, 248, 0.05);
+            border-color: rgba(56, 189, 248, 0.2);
+            transform: scale(1.02);
+        }
+
+        .feature-item .icon-circle {
+            width: 40px;
+            height: 40px;
+            background: rgba(56, 189, 248, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            color: #38bdf8;
+            font-size: 1.2rem;
+        }
+
+        .feature-item h4 {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #e2e8f0;
+        }
+
+        .feature-item p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        .feature-item .badge-mini {
+            background: rgba(99, 102, 241, 0.2);
+            color: #a5b4fc;
+            font-size: 0.7rem;
+            padding: 2px 10px;
+            border-radius: 100px;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        /* Bagian Sikap Ilmiah (Interaktif) */
+        .attitude-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .attitude-card {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 16px;
+            padding: 18px 15px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .attitude-card:hover {
+            background: rgba(56, 189, 248, 0.1);
+            border-color: #38bdf8;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -10px rgba(56, 189, 248, 0.15);
+        }
+
+        .attitude-card i {
+            font-size: 2rem;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .attitude-card h4 {
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .attitude-card p {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-top: 5px;
+        }
+
+        .attitude-card .check {
+            display: none;
+            color: #4ade80;
+            margin-top: 10px;
+            font-size: 0.8rem;
+        }
+
+        .attitude-card.active .check {
+            display: block;
+        }
+
+        /* Metode Ilmiah */
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(15, 23, 42, 0.4);
+            padding: 12px 18px;
+            border-radius: 14px;
+            border-left: 4px solid #818cf8;
+            transition: 0.2s;
+        }
+
+        .step:hover {
+            background: rgba(30, 58, 138, 0.2);
+        }
+
+        .step .num {
+            background: #818cf8;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .step .desc {
+            font-weight: 500;
+        }
+        .step .desc small {
+            color: #94a3b8;
+            font-weight: 400;
+            display: block;
+            font-size: 0.8rem;
+        }
+
+        /* Footer / Referensi */
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.8rem;
+            color: #64748b;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        /* Responsif */
+        @media (max-width: 850px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .attitude-grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            .tabs {
+                flex-wrap: wrap;
+            }
+            .tab-btn {
+                flex: 1 1 30%;
+                font-size: 0.8rem;
+                padding: 10px 5px;
+            }
+        }
+        @media (max-width: 500px) {
+            .container { padding: 15px; }
+            .tab-btn { flex: 1 1 100%; }
+        }
+    </style>
 </head>
 <body>
+
 <div class="container">
 
-  <!-- header -->
-  <div class="header">
-    <h1><i class="fas fa-atom" style="color:#1b4a8b; margin-right: 12px;"></i> Hakikat Fisika</h1>
-    <span class="badge"><i class="fas fa-graduation-cap"></i> Kelas X · Ganjil</span>
-  </div>
-
-  <!-- intro -->
-  <div class="subhead">
-    <i class="fas fa-rocket"></i>
-    <p>Fisika bukan sekadar rumus — ia adalah proses, produk, dan sikap ilmiah. <br> Mari pahami hakikat, ruang lingkup, dan peran fisika dalam kehidupan.</p>
-    <span class="quote"><i class="fas fa-quote-left"></i> Berdasarkan Modul & sumber kredibel</span>
-  </div>
-
-  <!-- grid utama -->
-  <div class="grid">
-
-    <!-- card 1: Hakikat Fisika -->
-    <div class="card">
-      <div class="card-icon"><i class="fas fa-flask"></i></div>
-      <h3>Hakikat Fisika</h3>
-      <p>Fisika sebagai <strong>ilmu</strong> mempelajari gejala alam. Hakikatnya mencakup tiga dimensi:</p>
-      <ul>
-        <li><strong>Proses</strong> — metode ilmiah, eksperimen, pengamatan.</li>
-        <li><strong>Produk</strong> — fakta, konsep, hukum, teori, rumus.</li>
-        <li><strong>Sikap</strong> — rasa ingin tahu, jujur, objektif, disiplin.</li>
-      </ul>
-      <div class="highlight">
-        <i class="fas fa-lightbulb" style="color:#f5b342;"></i> 
-        <strong>Sikap ilmiah</strong> · percaya diri, mau mendengar, kritis.
-      </div>
-      <a href="#" class="btn" onclick="alert('Hakikat fisika: proses, produk, sikap (modul hlm. 4)')"><i class="fas fa-book-open"></i> Baca di modul</a>
+    <!-- HEADER -->
+    <div class="header">
+        <h1><i class="fas fa-atom"></i> Hakikat Fisika</h1>
+        <div class="badge"><i class="fas fa-rocket"></i> Kelas X • Gen Z & Alpha</div>
     </div>
 
-    <!-- card 2: Ruang lingkup & cabang -->
-    <div class="card">
-      <div class="card-icon"><i class="fas fa-arrows-split-up-and-left"></i></div>
-      <h3>Ruang Lingkup</h3>
-      <p><strong>Fisika Klasik</strong> (Newton, Galileo, Faraday) · <strong>Fisika Modern</strong> (Einstein, Planck, Bohr, Schrödinger).</p>
-      <ul>
-        <li><strong>Klasik</strong> : mekanika, termodinamika, optika, elektromagnetik.</li>
-        <li><strong>Modern</strong> : relativitas, kuantum, fisika atom/nuklir, partikel, plasma.</li>
-      </ul>
-      <p style="font-size:0.95rem; background:#f4f9ff; padding:0.5rem 0.8rem; border-radius:20px;">
-        <i class="fas fa-user-astronaut"></i> Tokoh: Newton · Einstein · Maxwell · Bohr
-      </p>
-      <a href="#" class="btn" onclick="alert('Fisika klasik & modern — lihat tabel di modul hal.5-8')"><i class="fas fa-microscope"></i> Tokoh & cabang</a>
+    <!-- GRID UTAMA -->
+    <div class="main-grid">
+
+        <!-- SISI KIRI: PROFIL & ILUSTRASI -->
+        <div class="profile-card">
+            <div class="icon-big">
+                <i class="fas fa-flask"></i>
+            </div>
+            <h2>Fisika Itu...</h2>
+            <p>Bukan sekadar rumus, tapi cara memahami alam semesta. <br> <span style="color: #38bdf8;">#PhysicsIsEverywhere</span></p>
+            <div class="highlight-box">
+                <p><i class="fas fa-quote-right"></i> <strong>Hakikat Fisika</strong> adalah perpaduan antara <strong>produk</strong> (pengetahuan), <strong>proses</strong> (metode ilmiah), dan <strong>sikap</strong> (ilmiah) [citation:1][citation:6].</p>
+            </div>
+            <div style="margin-top: 20px; width: 100%;">
+                <p style="font-size:0.8rem; color:#64748b; text-align:left;"><i class="fas fa-lightbulb" style="color:#fbbf24;"></i> Klik tab di samping untuk eksplorasi!</p>
+            </div>
+        </div>
+
+        <!-- SISI KANAN: KONTEN INTERAKTIF -->
+        <div class="content-area">
+
+            <!-- TAB NAVIGASI -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="tab1"><i class="fas fa-brain"></i> Produk</button>
+                <button class="tab-btn" data-tab="tab2"><i class="fas fa-microscope"></i> Proses</button>
+                <button class="tab-btn" data-tab="tab3"><i class="fas fa-heart"></i> Sikap</button>
+            </div>
+
+            <!-- TAB PANELS -->
+            <div class="tab-panels">
+
+                <!-- Panel 1: Produk -->
+                <div id="tab1" class="panel active">
+                    <h3><i class="fas fa-database"></i> Fisika sebagai Produk</h3>
+                    <div class="subtitle">Kumpulan pengetahuan yang terorganisir: dari fakta hingga hukum.</div>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <div class="icon-circle"><i class="fas fa-list-ul"></i></div>
+                            <h4>Fakta & Data</h4>
+                            <p>Hasil observasi objektif, misalnya: "Air mendidih pada suhu 100°C."</p>
+                            <span class="badge-mini">Bukti Empiris</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-circle"><i class="fas fa-project-diagram"></i></div>
+                            <h4>Konsep & Prinsip</h4>
+                            <p>Ide abstrak seperti <strong>Gaya</strong>, <strong>Energi</strong>, dan prinsip kekekalan.</p>
+                            <span class="badge-mini">Landasan Teori</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-circle"><i class="fas fa-gavel"></i></div>
+                            <h4>Hukum & Teori</h4>
+                            <p>Hukum Newton tentang gerak, Teori Relativitas Einstein.</p>
+                            <span class="badge-mini">Generalisasi</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-circle"><i class="fas fa-calculator"></i></div>
+                            <h4>Rumus & Model</h4>
+                            <p>Representasi matematis, seperti F = m.a atau model atom Bohr.</p>
+                            <span class="badge-mini">Alat Prediksi</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; background: rgba(99,102,241,0.1); padding: 12px; border-radius: 12px; border: 1px dashed rgba(99,102,241,0.3);">
+                        <i class="fas fa-info-circle" style="color:#818cf8;"></i> <span style="font-size:0.9rem;">Produk fisika terus berkembang seiring penemuan baru [citation:1][citation:11].</span>
+                    </div>
+                </div>
+
+                <!-- Panel 2: Proses -->
+                <div id="tab2" class="panel">
+                    <h3><i class="fas fa-vial"></i> Fisika sebagai Proses</h3>
+                    <div class="subtitle">Metode ilmiah: langkah sistematis untuk mencari kebenaran.</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="num">1</div>
+                            <div class="desc">Observasi & Identifikasi Masalah <small>Mengamati fenomena, misalnya: "Mengapa apel jatuh ke bawah?"</small></div>
+                        </div>
+                        <div class="step">
+                            <div class="num">2</div>
+                            <div class="desc">Merumuskan Hipotesis <small>Dugaan sementara, contoh: "Ada gaya tarik Bumi."</small></div>
+                        </div>
+                        <div class="step">
+                            <div class="num">3</div>
+                            <div class="desc">Eksperimen & Pengumpulan Data <small>Melakukan percobaan terkontrol, mengukur variabel.</small></div>
+                        </div>
+                        <div class="step">
+                            <div class="num">4</div>
+                            <div class="desc">Analisis Data & Kesimpulan <small>Mengolah data, menguji hipotesis, menarik kesimpulan.</small></div>
+                        </div>
+                        <div class="step">
+                            <div class="num">5</div>
+                            <div class="desc">Komunikasi & Publikasi <small>Menyebarkan temuan untuk dikaji ulang oleh komunitas ilmiah.</small></div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px; background: rgba(56,189,248,0.05); padding: 10px 15px; border-radius: 12px; border-left: 3px solid #38bdf8;">
+                        <i class="fas fa-arrow-right" style="color:#38bdf8;"></i> <span style="font-size:0.9rem;">Proses ini membentuk <strong>siklus empirico-logico-verification</strong> yang dirintis oleh Newton [citation:9].</span>
+                    </div>
+                </div>
+
+                <!-- Panel 3: Sikap -->
+                <div id="tab3" class="panel">
+                    <h3><i class="fas fa-user-astronaut"></i> Fisika sebagai Sikap</h3>
+                    <div class="subtitle">Sikap ilmiah adalah fondasi seorang ilmuwan. Klik kartu untuk eksplorasi!</div>
+                    <div class="attitude-grid" id="attitudeContainer">
+                        <div class="attitude-card" data-attitude="1">
+                            <i class="fas fa-question-circle"></i>
+                            <h4>Rasa Ingin Tahu</h4>
+                            <p>Antusias mencari jawaban, tidak puas dengan penjelasan dangkal.</p>
+                            <div class="check"><i class="fas fa-check-circle"></i> Contoh: Bertanya "mengapa langit berwarna biru?"</div>
+                        </div>
+                        <div class="attitude-card" data-attitude="2">
+                            <i class="fas fa-balance-scale"></i>
+                            <h4>Objektif & Jujur</h4>
+                            <p>Menerima fakta apa adanya, tidak memanipulasi data.</p>
+                            <div class="check"><i class="fas fa-check-circle"></i> Contoh: Melaporkan hasil eksperimen sesuai data.</div>
+                        </div>
+                        <div class="attitude-card" data-attitude="3">
+                            <i class="fas fa-brain"></i>
+                            <h4>Berpikir Kritis & Terbuka</h4>
+                            <p>Meragukan temuan, menghargai pendapat lain, dan siap mengubah pandangan.</p>
+                            <div class="check"><i class="fas fa-check-circle"></i> Contoh: Diskusi untuk menemukan kebenaran.</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; background: rgba(251,191,36,0.08); padding: 12px; border-radius: 12px; border: 1px solid rgba(251,191,36,0.15);">
+                        <i class="fas fa-gem" style="color:#fbbf24;"></i> <span style="font-size:0.9rem;">Sikap ilmiah seperti <strong>keingintahuan</strong>, <strong>kejujuran</strong>, dan <strong>keterbukaan</strong> adalah kunci penemuan besar [citation:5][citation:10].</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- card 3: Hubungan lintas mapel & profesi -->
-    <div class="card">
-      <div class="card-icon"><i class="fas fa-sitemap"></i></div>
-      <h3>Hubungan & Profesi</h3>
-      <p>Fisika terhubung dengan <strong>kimia, biologi, matematika, geografi, teknologi</strong>. Juga membuka jalan ke profesi masa depan:</p>
-      <ul>
-        <li><i class="fas fa-code"></i> Quantum Programmer</li>
-        <li><i class="fas fa-cloud-sun"></i> Climate Engineer</li>
-        <li><i class="fas fa-vr-cardboard"></i> Metaverse Developer</li>
-        <li><i class="fas fa-dna"></i> Bio-Nano Engineer</li>
-        <li><i class="fas fa-rocket"></i> Space Tourism Expert</li>
-      </ul>
-      <div style="background:#e3edff; border-radius:30px; padding:0.2rem 1rem; font-size:0.85rem; margin-top:0.3rem;">
-        <i class="fas fa-graduation-cap"></i> Sumber: modul hlm. 10-11
-      </div>
-      <a href="#" class="btn" onclick="alert('Lihat Tabel 1.5 — profesi masa depan berbasis fisika')"><i class="fas fa-briefcase"></i> Profesi & jurusan</a>
+    <!-- FOOTER -->
+    <div class="footer">
+        <span><i class="far fa-copyright"></i> SMAK Kolese Santo Yusup Malang • Berdasarkan Modul Fisika Kelas X</span>
+        <span>
+            <i class="fas fa-book-open"></i> Referensi: Modul & Sumber Kredibel
+            <i class="fas fa-external-link-alt" style="margin-left:10px; font-size:0.7rem;"></i>
+        </span>
     </div>
-
-    <!-- card 4: Besaran & pengukuran (dasar) -->
-    <div class="card">
-      <div class="card-icon"><i class="fas fa-ruler"></i></div>
-      <h3>Besaran & Satuan</h3>
-      <p><strong>7 besaran pokok</strong> : panjang (m), massa (kg), waktu (s), arus (A), suhu (K), intensitas cahaya (cd), jumlah zat (mol).</p>
-      <p><strong>Besaran turunan</strong> : kecepatan, gaya, usaha, tekanan, dll.</p>
-      <div style="background:#f0f7ff; border-radius:18px; padding:0.8rem 1rem; margin:0.8rem 0;">
-        <i class="fas fa-exclamation-triangle" style="color:#c47b2b;"></i> 
-        <strong>Dimensi</strong> · [L], [M], [T] … analisis dimensi penting untuk cek rumus.
-      </div>
-      <a href="#" class="btn" onclick="alert('Besaran pokok & turunan, dimensi — modul hal.12-18')"><i class="fas fa-calculator"></i> Pelajari dimensi</a>
-    </div>
-
-    <!-- card 5: Pengukuran & alat ukur -->
-    <div class="card">
-      <div class="card-icon"><i class="fas fa-microscope"></i></div>
-      <h3>Pengukuran & Alat Ukur</h3>
-      <ul>
-        <li><strong>Panjang</strong> : mistar (0,5 mm), jangka sorong (0,005 cm), mikrometer (0,0005 cm).</li>
-        <li><strong>Massa</strong> : neraca Ohaus, analitik.</li>
-        <li><strong>Waktu</strong> : stopwatch analog/digital.</li>
-        <li><strong>Listrik</strong> : basicmeter, multimeter, amperemeter, voltmeter.</li>
-      </ul>
-      <p><i class="fas fa-rule"></i> Ketidakpastian = ½ × skala terkecil (tunggal).</p>
-      <a href="#" class="btn" onclick="alert('Alat ukur & ketelitian — modul hal.24-29')"><i class="fas fa-ruler-combined"></i> Detail alat ukur</a>
-    </div>
-
-    <!-- card 6: Angka penting & notasi ilmiah -->
-    <div class="card">
-      <div class="card-icon"><i class="fas fa-superscript"></i></div>
-      <h3>Angka Penting & Notasi</h3>
-      <p>Aturan angka penting: semua angka bukan nol AP, nol di antara AP, nol di belakang koma AP.</p>
-      <p><strong>Notasi ilmiah</strong> : <em>a × 10<sup>n</sup></em> dengan 1 ≤ a < 10.</p>
-      <div class="highlight" style="background:#dce8fa;">
-        <i class="fas fa-pen-fancy"></i> Contoh: 0,0000435 km = 4,35×10⁻⁵ km (3 AP)
-      </div>
-      <a href="#" class="btn" onclick="alert('Aturan angka penting & notasi ilmiah — modul hal.37-41')"><i class="fas fa-calculator"></i> Latihan angka penting</a>
-    </div>
-
-  </div> <!-- end grid -->
-
-  <!-- sumber kredibel & modul -->
-  <div class="sumber">
-    <h4><i class="fas fa-book"></i> Sumber & referensi kredibel</h4>
-    <div class="ref-list">
-      <span><i class="fas fa-check-circle" style="color:#1f8b4c;"></i> Modul Fisika Kelas X (SMAK Kolese Santo Yusup) — Bab 1</span>
-      <span><i class="fas fa-globe"></i> <a href="#" onclick="alert('BIP · Badan Standardisasi Nasional')">BSN · Satuan SI</a></span>
-      <span><i class="fas fa-university"></i> <a href="#" onclick="alert('Kemdikbud · Fisika Dasar')">Kemdikbud RI</a></span>
-      <span><i class="fas fa-flask"></i> <a href="#" onclick="alert('Physics Classroom · Nature of Science')">Physics Classroom</a></span>
-      <span><i class="fas fa-atom"></i> <a href="#" onclick="alert('NASA · Pengukuran & satuan')">NASA · Measurement</a></span>
-    </div>
-    <div style="margin-top: 0.8rem; font-size: 0.9rem; background: #eaf1fd; padding: 0.5rem 1rem; border-radius: 40px;">
-      <i class="fas fa-info-circle"></i> Berdasarkan modul hlm. 3–23 (Besaran & Pengukuran) serta sumber terpercaya.
-    </div>
-    <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 10px;">
-      <span style="background:#d4e2fc; padding:0.2rem 1.2rem; border-radius:30px;"><i class="fas fa-flask"></i> Hakikat fisika (hlm.4)</span>
-      <span style="background:#d4e2fc; padding:0.2rem 1.2rem; border-radius:30px;"><i class="fas fa-bolt"></i> Fisika klasik & modern (hlm.5-8)</span>
-      <span style="background:#d4e2fc; padding:0.2rem 1.2rem; border-radius:30px;"><i class="fas fa-chart-line"></i> Dimensi & konversi (hlm.17-23)</span>
-    </div>
-  </div>
-
-  <!-- catatan akhir -->
-  <div class="footer-note">
-    <i class="fas fa-robot"></i> Media interaktif · untuk pembelajaran mandiri ·  <i class="fas fa-rotate-left"></i> Klik tombol untuk melihat ringkasan dari modul.
-    <br><span style="font-size:0.8rem; opacity:0.7;">Sumber: Modul Fisika Kelas X Semester Ganjil · SMAK Kolese Santo Yusup Malang</span>
-  </div>
-
 </div>
-<!-- container end -->
 
 <script>
-  // tidak ada fungsi khusus, hanya tombol alert sebagai demo interaktif.
-  // semuanya sudah inline onclick.
+    // --- FUNGSI TAB ---
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.panel');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Hapus active dari semua tombol dan panel
+            tabBtns.forEach(b => b.classList.remove('active'));
+            panels.forEach(p => p.classList.remove('active'));
+
+            // Aktifkan tombol yang diklik
+            btn.classList.add('active');
+
+            // Aktifkan panel yang sesuai
+            const target = btn.dataset.tab;
+            document.getElementById(target).classList.add('active');
+        });
+    });
+
+    // --- FUNGSI INTERAKTIF SIKAP (KLIK KARTU) ---
+    const attitudeCards = document.querySelectorAll('.attitude-card');
+
+    attitudeCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Toggle class active pada kartu yang diklik
+            // Jika ingin hanya satu aktif, hapus active dari yang lain
+            // attitudeCards.forEach(c => c.classList.remove('active'));
+            this.classList.toggle('active');
+        });
+    });
+
+    // Efek hover tambahan untuk kartu sikap agar lebih interaktif
+    // (Sudah ada di CSS)
+
+    console.log('Media Interaktif Hakikat Fisika siap!');
 </script>
 
 </body>
