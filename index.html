@@ -92,7 +92,6 @@
             gap: 8px;
         }
 
-        /* ===== BAGIAN PEMBUKA ===== */
         .welcome-section {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -221,7 +220,6 @@
             margin-top: 8px;
         }
 
-        /* INTRO SECTION */
         .intro-section {
             background: linear-gradient(135deg, rgba(255, 138, 101, 0.10), rgba(129, 212, 250, 0.10));
             border-radius: 20px;
@@ -252,7 +250,6 @@
             background-clip: text;
         }
 
-        /* TABS */
         .tabs-wrapper {
             display: flex;
             gap: 12px;
@@ -302,7 +299,6 @@
             background: rgba(255,255,255,0.25);
         }
 
-        /* PANELS */
         .panels-container {
             background: rgba(255, 255, 255, 0.5);
             border-radius: 24px;
@@ -364,7 +360,6 @@
             padding-bottom: 14px;
         }
 
-        /* VISUAL DEMO */
         .visual-demo {
             background: rgba(255, 255, 255, 0.6);
             border-radius: 18px;
@@ -452,7 +447,6 @@
             margin-top: 4px;
         }
 
-        /* PRODUCT GRID */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -538,7 +532,6 @@
             margin-right: 6px;
         }
 
-        /* PROCESS */
         .process-timeline {
             display: flex;
             flex-direction: column;
@@ -599,7 +592,6 @@
             margin-top: 4px;
         }
 
-        /* ATTITUDE */
         .attitude-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -803,7 +795,6 @@
 
 <div class="container">
 
-    <!-- HEADER -->
     <div class="header">
         <div class="header-left">
             <div class="icon-badge"><i class="fas fa-flask"></i></div>
@@ -814,9 +805,8 @@
         </div>
     </div>
 
-    <!-- ===== BAGIAN PEMBUKA: APA ITU FISIKA ===== -->
+    <!-- ===== BAGIAN PEMBUKA ===== -->
     <div class="welcome-section">
-        <!-- Kartu 1: Apa Itu Fisika? -->
         <div class="welcome-card">
             <span class="card-icon"><i class="fas fa-question-circle"></i></span>
             <h3>Apa Itu <span class="highlight">Fisika</span>?</h3>
@@ -836,7 +826,6 @@
             </div>
         </div>
 
-        <!-- Kartu 2: Di Fisika Belajar Apa Sih? -->
         <div class="welcome-card">
             <span class="card-icon"><i class="fas fa-graduation-cap"></i></span>
             <h3>Di Fisika Belajar <span class="highlight">Apa Sih</span>?</h3>
@@ -870,7 +859,6 @@
             </div>
         </div>
 
-        <!-- Kartu 3: Kenapa Belajar Fisika Penting? -->
         <div class="welcome-card" style="background: linear-gradient(135deg, #fff8f5, #fff3e0); border-color: rgba(255,138,101,0.15);">
             <span class="card-icon"><i class="fas fa-star"></i></span>
             <h3>Kenapa Belajar <span class="highlight">Fisika</span> Penting?</h3>
@@ -931,45 +919,45 @@
                 </button>
             </div>
 
-            <!-- VISUAL DEMO - PRODUK FISIKA (GAMBAR DARI LINK YANG DIBERIKAN) -->
+            <!-- ===== VISUAL DEMO - PRODUK FISIKA (GAMBAR BARU) ===== -->
             <div class="visual-demo">
                 <div class="demo-title">
                     <i class="fas fa-image" style="color:#ff6e40;"></i> 
                     Contoh Nyata Produk Fisika
                 </div>
                 <div class="demo-grid">
-                    <!-- 1. Pembiasan Cahaya (KONSEP) - dari artikel Adjar.grid.id -->
+                    <!-- 1. Pelangi (Pembiasan Cahaya) - KONSEP -->
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2020/08/28/2263637079.jpg" alt="Pembiasan cahaya pensil dalam gelas air">
+                            <img src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=400&h=200&fit=crop&crop=center" alt="Pelangi - contoh pembiasan cahaya">
                         </div>
                         <div class="info">
-                            <div class="label">Pembiasan Cahaya</div>
-                            <div class="desc">Pensil di dalam air keliatan bengkok/patah → <strong>Konsep</strong> Fisika Optik</div>
+                            <div class="label">Pelangi</div>
+                            <div class="desc">Pelangi terjadi karena pembiasan cahaya matahari oleh tetesan air → <strong>Konsep</strong> Fisika Optik</div>
                             <span class="badge-visual">Konsep</span>
                         </div>
                     </div>
 
-                    <!-- 2. Model Atom (MODEL) - dari Wikipedia Mekanika Kuantum -->
+                    <!-- 2. Mekanika Kuantum (MODEL) -->
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Atom_model.svg/800px-Atom_model.svg.png" alt="Model atom">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Atom_model.svg/800px-Atom_model.svg.png" alt="Model atom mekanika kuantum">
                         </div>
                         <div class="info">
-                            <div class="label">Model Atom</div>
-                            <div class="desc">Gambaran struktur atom dengan inti dan elektron → <strong>Model</strong> Fisika</div>
+                            <div class="label">Model Atom Kuantum</div>
+                            <div class="desc">Model atom modern dengan orbital elektron probabilistik → <strong>Model</strong> Fisika</div>
                             <span class="badge-visual">Model</span>
                         </div>
                     </div>
 
-                    <!-- 3. Hukum Newton - Konstruksi (HUKUM) - dari Widya.ai -->
+                    <!-- 3. Konstruksi Bangunan (HUKUM) -->
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=200&fit=crop&crop=center" alt="Katrol dan konstruksi bangunan">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=200&fit=crop&crop=center" alt="Konstruksi bangunan - contoh hukum Newton">
                         </div>
                         <div class="info">
-                            <div class="label">Hukum Newton</div>
-                            <div class="desc">Prinsip gaya dan katrol dipake di konstruksi gedung → <strong>Hukum</strong> Fisika</div>
+                            <div class="label">Konstruksi Bangunan</div>
+                            <div class="desc">Prinsip gaya dan katrol dipake di konstruksi gedung → <strong>Hukum</strong> Newton</div>
                             <span class="badge-visual">Hukum</span>
                         </div>
                     </div>
