@@ -19,19 +19,16 @@
             background: #f0f7ff;
             color: #1a2634;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             padding: 20px;
             background-image: 
-                radial-gradient(circle at 10% 20%, rgba(255, 183, 77, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 90% 80%, rgba(129, 212, 250, 0.15) 0%, transparent 50%);
+                radial-gradient(circle at 10% 20%, rgba(255, 183, 77, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(129, 212, 250, 0.12) 0%, transparent 50%);
         }
 
         .container {
             max-width: 1150px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.85);
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-radius: 40px;
@@ -45,7 +42,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             flex-wrap: wrap;
             gap: 12px;
         }
@@ -96,16 +93,12 @@
             gap: 8px;
         }
 
-        .header .tagline i {
-            color: #ff8a65;
-        }
-
         /* INTRO */
         .intro-section {
             background: linear-gradient(135deg, rgba(255, 138, 101, 0.08), rgba(129, 212, 250, 0.08));
             border-radius: 20px;
-            padding: 18px 24px;
-            margin-bottom: 28px;
+            padding: 16px 24px;
+            margin-bottom: 24px;
             border: 1px solid rgba(255, 138, 101, 0.08);
             display: flex;
             align-items: center;
@@ -114,11 +107,11 @@
         }
 
         .intro-section .emoji-big {
-            font-size: 2.4rem;
+            font-size: 2.2rem;
         }
 
         .intro-section p {
-            font-size: 1.05rem;
+            font-size: 1rem;
             color: #37474f;
             line-height: 1.6;
             flex: 1;
@@ -141,7 +134,7 @@
 
         .tab-btn {
             flex: 1;
-            padding: 16px 12px;
+            padding: 14px 12px;
             border: none;
             background: rgba(200, 215, 230, 0.3);
             border-radius: 16px;
@@ -150,16 +143,12 @@
             font-weight: 600;
             font-size: 0.95rem;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
             border: 2px solid transparent;
-        }
-
-        .tab-btn i {
-            font-size: 1.1rem;
         }
 
         .tab-btn:hover {
@@ -231,12 +220,11 @@
             font-size: 0.7rem;
             font-weight: 600;
             color: #e65100;
-            letter-spacing: 0.5px;
             text-transform: uppercase;
         }
 
         .panel h2 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 700;
             color: #1a2634;
         }
@@ -244,61 +232,127 @@
         .panel .sub {
             color: #546e7a;
             font-size: 0.95rem;
-            margin-bottom: 22px;
+            margin-bottom: 20px;
             border-bottom: 1px solid rgba(0,0,0,0.04);
-            padding-bottom: 16px;
+            padding-bottom: 14px;
         }
 
-        /* ===== PRODUK GRID ===== */
+        /* ===== VISUAL DEMO AREA ===== */
+        .visual-demo {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 18px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 2px dashed rgba(255, 138, 101, 0.15);
+            text-align: center;
+        }
+
+        .visual-demo .demo-title {
+            font-weight: 600;
+            color: #1a2634;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .visual-demo .demo-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .demo-card {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            flex: 1;
+            min-width: 200px;
+            max-width: 280px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: transform 0.3s ease;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .demo-card .preview {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 16px;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #ff6e40;
+        }
+
+        .demo-card .preview img {
+            max-width: 100%;
+            max-height: 80px;
+            border-radius: 8px;
+        }
+
+        .demo-card .label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #1a2634;
+            margin-top: 8px;
+        }
+
+        .demo-card .desc {
+            font-size: 0.75rem;
+            color: #78909c;
+        }
+
+        .demo-card .badge-visual {
+            display: inline-block;
+            font-size: 0.6rem;
+            background: rgba(255, 138, 101, 0.1);
+            padding: 2px 10px;
+            border-radius: 100px;
+            color: #e65100;
+            margin-top: 4px;
+        }
+
+        /* ===== PRODUCT GRID ===== */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 14px;
         }
 
         .product-card {
             background: white;
             border-radius: 18px;
-            padding: 20px;
+            padding: 18px;
             border: 1px solid rgba(0,0,0,0.04);
             transition: all 0.3s ease;
-            cursor: default;
-            position: relative;
             box-shadow: 0 2px 12px rgba(0,0,0,0.02);
-        }
-
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #ff8a65, #ff6e40);
-            opacity: 0;
-            transition: opacity 0.3s;
-            border-radius: 18px 18px 0 0;
-        }
-
-        .product-card:hover::before {
-            opacity: 1;
+            cursor: pointer;
         }
 
         .product-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(255, 138, 101, 0.12);
+            box-shadow: 0 12px 30px rgba(255, 138, 101, 0.10);
             border-color: rgba(255, 138, 101, 0.15);
         }
 
         .product-card .icon-wrap {
-            width: 44px;
-            height: 44px;
-            border-radius: 14px;
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
         }
 
         .product-card .icon-wrap.orange { background: rgba(255, 138, 101, 0.12); color: #ff6e40; }
@@ -317,7 +371,7 @@
             padding: 2px 10px;
             border-radius: 100px;
             display: inline-block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .product-card .level-tag.dasar { background: rgba(129, 212, 250, 0.2); color: #0288d1; }
@@ -327,23 +381,23 @@
 
         .product-card h3 {
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #1a2634;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .product-card p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #546e7a;
             line-height: 1.5;
         }
 
         .product-card .example {
-            margin-top: 10px;
+            margin-top: 8px;
             background: rgba(0,0,0,0.02);
-            padding: 8px 12px;
-            border-radius: 10px;
-            font-size: 0.85rem;
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 0.8rem;
             color: #1a2634;
             border-left: 3px solid #ff8a65;
         }
@@ -353,20 +407,20 @@
             margin-right: 6px;
         }
 
-        /* ===== PROSES TIMELINE ===== */
+        /* ===== PROCESS ===== */
         .process-timeline {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
         }
 
         .process-step {
             display: flex;
             align-items: flex-start;
-            gap: 18px;
+            gap: 16px;
             background: white;
-            padding: 14px 20px;
-            border-radius: 16px;
+            padding: 12px 18px;
+            border-radius: 14px;
             border-left: 4px solid #ff8a65;
             transition: all 0.3s ease;
             box-shadow: 0 2px 8px rgba(0,0,0,0.02);
@@ -375,87 +429,85 @@
         .process-step:hover {
             background: rgba(255, 138, 101, 0.04);
             transform: translateX(6px);
-            box-shadow: 0 4px 16px rgba(255, 138, 101, 0.06);
         }
 
         .process-step .num {
-            width: 32px;
-            height: 32px;
-            min-width: 32px;
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
             background: linear-gradient(135deg, #ff8a65, #ff6e40);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: white;
         }
 
         .process-step .content h4 {
             font-weight: 600;
             color: #1a2634;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         .process-step .content p {
             color: #546e7a;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             line-height: 1.5;
             margin-top: 2px;
         }
 
         .process-step .content .mini-example {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #e65100;
             background: rgba(255, 138, 101, 0.08);
-            padding: 4px 12px;
+            padding: 2px 12px;
             border-radius: 100px;
             display: inline-block;
             margin-top: 4px;
         }
 
-        /* ===== SIKAP GRID ===== */
+        /* ===== ATTITUDE ===== */
         .attitude-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 14px;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 12px;
         }
 
         .attitude-card {
             background: white;
-            border-radius: 18px;
-            padding: 18px 14px;
+            border-radius: 16px;
+            padding: 16px 12px;
             text-align: center;
             border: 1px solid rgba(0,0,0,0.04);
             transition: all 0.3s ease;
             cursor: pointer;
-            position: relative;
             box-shadow: 0 2px 8px rgba(0,0,0,0.02);
         }
 
         .attitude-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             box-shadow: 0 12px 30px rgba(255, 138, 101, 0.08);
             border-color: rgba(255, 138, 101, 0.15);
         }
 
         .attitude-card .emoji-big {
-            font-size: 2.2rem;
-            margin-bottom: 6px;
+            font-size: 2rem;
+            margin-bottom: 4px;
             display: block;
         }
 
         .attitude-card h3 {
             font-weight: 700;
             color: #1a2634;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .attitude-card .desc {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #546e7a;
-            margin: 4px 0 8px;
+            margin: 4px 0 6px;
             line-height: 1.4;
         }
 
@@ -465,11 +517,11 @@
             transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
             opacity: 0;
             background: rgba(255, 138, 101, 0.04);
-            border-radius: 12px;
-            padding: 0 12px;
+            border-radius: 10px;
+            padding: 0 10px;
             margin-top: 0;
             text-align: left;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #1a2634;
             border-left: 3px solid #ff8a65;
         }
@@ -482,12 +534,12 @@
         .attitude-card.active .detail {
             max-height: 200px;
             opacity: 1;
-            padding: 10px 12px;
-            margin-top: 8px;
+            padding: 8px 10px;
+            margin-top: 6px;
         }
 
         .attitude-card .click-hint {
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             color: #b0bec5;
             display: block;
             margin-top: 4px;
@@ -515,8 +567,8 @@
 
         /* BOTTOM */
         .bottom-note {
-            margin-top: 24px;
-            padding: 16px 20px;
+            margin-top: 20px;
+            padding: 14px 20px;
             background: rgba(255, 255, 255, 0.4);
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.5);
@@ -524,13 +576,13 @@
             align-items: center;
             gap: 14px;
             flex-wrap: wrap;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #546e7a;
         }
 
         .bottom-note i {
             color: #ff8a65;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .bottom-note strong {
@@ -552,9 +604,10 @@
             .product-grid { grid-template-columns: 1fr 1fr; }
             .attitude-grid { grid-template-columns: 1fr 1fr; }
             .tabs-wrapper { flex-direction: column; }
-            .tab-btn { padding: 14px; }
-            .panel h2 { font-size: 1.4rem; }
+            .tab-btn { padding: 12px; }
+            .panel h2 { font-size: 1.3rem; }
             .intro-section { flex-direction: column; text-align: center; }
+            .demo-card { min-width: 150px; }
         }
 
         @media (max-width: 540px) {
@@ -563,8 +616,10 @@
             .product-grid { grid-template-columns: 1fr; }
             .attitude-grid { grid-template-columns: 1fr; }
             .header-left .icon-badge { width: 40px; height: 40px; font-size: 1.2rem; }
-            .panel h2 { font-size: 1.2rem; }
+            .panel h2 { font-size: 1.1rem; }
             .header .tagline { font-size: 0.7rem; padding: 6px 14px; }
+            .visual-demo .demo-content { flex-direction: column; }
+            .demo-card { max-width: 100%; }
         }
     </style>
 </head>
@@ -620,6 +675,40 @@
             </div>
             <div class="sub">Pengetahuan terstruktur dari yang paling dasar hingga paling kompleks.</div>
 
+            <!-- VISUAL DEMO - PRODUK -->
+            <div class="visual-demo">
+                <div class="demo-title">
+                    <i class="fas fa-image" style="color:#ff6e40;"></i> 
+                    Visualisasi Produk Fisika
+                </div>
+                <div class="demo-content">
+                    <div class="demo-card">
+                        <div class="preview">
+                            <i class="fas fa-water" style="font-size:2rem; color:#0288d1;"></i>
+                        </div>
+                        <div class="label">Pembiasan Cahaya</div>
+                        <div class="desc">Pensil dalam air tampak patah → <strong>Konsep</strong> Fisika [citation:1]</div>
+                        <span class="badge-visual">Contoh Produk</span>
+                    </div>
+                    <div class="demo-card">
+                        <div class="preview">
+                            <i class="fas fa-atom" style="font-size:2rem; color:#7b1fa2;"></i>
+                        </div>
+                        <div class="label">Model Atom Bohr</div>
+                        <div class="desc">Representasi visual struktur atom → <strong>Model</strong> Fisika</div>
+                        <span class="badge-visual">Contoh Produk</span>
+                    </div>
+                    <div class="demo-card">
+                        <div class="preview">
+                            <span style="font-size:1.4rem; font-weight:700; color:#ff6e40;">F = m·a</span>
+                        </div>
+                        <div class="label">Hukum Newton II</div>
+                        <div class="desc">Rumus matematis hubungan gaya, massa, percepatan → <strong>Rumus</strong></div>
+                        <span class="badge-visual">Contoh Produk</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="product-grid">
                 <!-- 1. FAKTA -->
                 <div class="product-card">
@@ -636,7 +725,7 @@
                     <span class="level-tag dasar">Dasar</span>
                     <h3>Konsep</h3>
                     <p>Ide abstrak yang menghubungkan fakta-fakta menjadi pola pemikiran yang bermakna.</p>
-                    <div class="example"><i class="fas fa-check-circle"></i> Konsep <strong>gaya</strong>, <strong>energi</strong>, <strong>massa</strong>, <strong>percepatan</strong>.</div>
+                    <div class="example"><i class="fas fa-check-circle"></i> Konsep <strong>gaya</strong>, <strong>energi</strong>, <strong>massa</strong>.</div>
                 </div>
 
                 <!-- 3. PRINSIP -->
@@ -645,7 +734,7 @@
                     <span class="level-tag menengah">Menengah</span>
                     <h3>Prinsip</h3>
                     <p>Hubungan sebab-akibat yang menjelaskan bagaimana konsep-konsep saling terkait.</p>
-                    <div class="example"><i class="fas fa-check-circle"></i> "Semakin besar gaya, semakin besar percepatan" (Prinsip Newton).</div>
+                    <div class="example"><i class="fas fa-check-circle"></i> "Semakin besar gaya, semakin besar percepatan."</div>
                 </div>
 
                 <!-- 4. HUKUM -->
@@ -654,7 +743,7 @@
                     <span class="level-tag menengah">Menengah</span>
                     <h3>Hukum</h3>
                     <p>Generalisasi universal, teruji berulang kali, dinyatakan dalam bentuk matematis.</p>
-                    <div class="example"><i class="fas fa-check-circle"></i> Hukum I Newton (Kelembaman), Hukum Kekekalan Energi.</div>
+                    <div class="example"><i class="fas fa-check-circle"></i> Hukum I Newton, Hukum Kekekalan Energi.</div>
                 </div>
 
                 <!-- 5. TEORI -->
@@ -663,7 +752,7 @@
                     <span class="level-tag tinggi">Tinggi</span>
                     <h3>Teori</h3>
                     <p>Penjelasan komprehensif didukung banyak bukti dan mampu memprediksi fenomena baru.</p>
-                    <div class="example"><i class="fas fa-check-circle"></i> Teori Relativitas Einstein, Teori Kinetik Gas.</div>
+                    <div class="example"><i class="fas fa-check-circle"></i> Teori Relativitas Einstein.</div>
                 </div>
 
                 <!-- 6. MODEL -->
@@ -672,16 +761,16 @@
                     <span class="level-tag tinggi">Tinggi</span>
                     <h3>Model</h3>
                     <p>Representasi visual atau matematis dari suatu fenomena untuk memudahkan pemahaman.</p>
-                    <div class="example"><i class="fas fa-check-circle"></i> Model Atom Bohr, Model Standar Partikel.</div>
+                    <div class="example"><i class="fas fa-check-circle"></i> Model Atom Bohr.</div>
                 </div>
 
-                <!-- 7. RUMUS / FORMULA -->
+                <!-- 7. RUMUS -->
                 <div class="product-card">
                     <div class="icon-wrap yellow"><i class="fas fa-calculator"></i></div>
                     <span class="level-tag tertinggi">Tertinggi</span>
                     <h3>Rumus / Formula</h3>
                     <p>Ekspresi matematis yang memungkinkan perhitungan dan prediksi kuantitatif.</p>
-                    <div class="example"><i class="fas fa-check-circle"></i> <strong>F = m·a</strong>, E = mc², v = s/t</div>
+                    <div class="example"><i class="fas fa-check-circle"></i> <strong>F = m·a</strong>, E = mc²</div>
                 </div>
             </div>
         </div>
@@ -696,6 +785,40 @@
             </div>
             <div class="sub">Langkah sistematis untuk membangun dan menguji pengetahuan fisika.</div>
 
+            <!-- VISUAL DEMO - PROSES -->
+            <div class="visual-demo">
+                <div class="demo-title">
+                    <i class="fas fa-play-circle" style="color:#ff6e40;"></i> 
+                    Simulasi Proses Ilmiah
+                </div>
+                <div class="demo-content">
+                    <div class="demo-card">
+                        <div class="preview">
+                            <i class="fas fa-vial" style="font-size:2rem; color:#388e3c;"></i>
+                        </div>
+                        <div class="label">Eksperimen</div>
+                        <div class="desc">Ilmuwan melakukan <strong>eksperimen</strong> berkali-kali untuk menguji hipotesis [citation:5]</div>
+                        <span class="badge-visual">Proses</span>
+                    </div>
+                    <div class="demo-card">
+                        <div class="preview">
+                            <i class="fas fa-chart-line" style="font-size:2rem; color:#f57f17;"></i>
+                        </div>
+                        <div class="label">Analisis Data</div>
+                        <div class="desc">Mengolah dan menginterpretasi data hasil eksperimen</div>
+                        <span class="badge-visual">Proses</span>
+                    </div>
+                    <div class="demo-card">
+                        <div class="preview">
+                            <i class="fas fa-file-alt" style="font-size:2rem; color:#c2185b;"></i>
+                        </div>
+                        <div class="label">Publikasi</div>
+                        <div class="desc">Menyebarkan temuan melalui jurnal atau konferensi</div>
+                        <span class="badge-visual">Proses</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="process-timeline">
                 <div class="process-step">
                     <div class="num">1</div>
@@ -709,7 +832,7 @@
                     <div class="num">2</div>
                     <div class="content">
                         <h4>Merumuskan Hipotesis</h4>
-                        <p>Dugaan sementara yang logis dan dapat diuji melalui eksperimen atau observasi.</p>
+                        <p>Dugaan sementara yang logis dan dapat diuji melalui eksperimen.</p>
                         <span class="mini-example"><i class="fas fa-lightbulb"></i> "Bumi menarik semua benda dengan gaya gravitasi."</span>
                     </div>
                 </div>
@@ -749,6 +872,40 @@
                 </div>
             </div>
             <div class="sub">Sikap ilmiah adalah fondasi yang membuat fisika berkembang. <strong style="color:#ff6e40;">Klik kartu</strong> untuk melihat contoh!</div>
+
+            <!-- VISUAL DEMO - SIKAP -->
+            <div class="visual-demo">
+                <div class="demo-title">
+                    <i class="fas fa-users" style="color:#ff6e40;"></i> 
+                    Sikap Ilmiah dalam Praktik
+                </div>
+                <div class="demo-content">
+                    <div class="demo-card">
+                        <div class="preview">
+                            <i class="fas fa-hand-holding-heart" style="font-size:2rem; color:#ff6e40;"></i>
+                        </div>
+                        <div class="label">Kerja Sama</div>
+                        <div class="desc">Ilmuwan <strong>bekerja sama</strong> dan saling menghargai pendapat [citation:3]</div>
+                        <span class="badge-visual">Sikap Sosial</span>
+                    </div>
+                    <div class="demo-card">
+                        <div class="preview">
+                            <i class="fas fa-search" style="font-size:2rem; color:#0277bd;"></i>
+                        </div>
+                        <div class="label">Rasa Ingin Tahu</div>
+                        <div class="desc">Dorongan untuk <strong>bertanya</strong> dan mencari tahu [citation:3]</div>
+                        <span class="badge-visual">Sikap Kognitif</span>
+                    </div>
+                    <div class="demo-card">
+                        <div class="preview">
+                            <i class="fas fa-balance-scale" style="font-size:2rem; color:#c2185b;"></i>
+                        </div>
+                        <div class="label">Kejujuran</div>
+                        <div class="desc"><strong>Objektif</strong> dan jujur terhadap data penelitian [citation:3]</div>
+                        <span class="badge-visual">Sikap Afektif</span>
+                    </div>
+                </div>
+            </div>
 
             <div class="attitude-grid">
                 <!-- 1 -->
