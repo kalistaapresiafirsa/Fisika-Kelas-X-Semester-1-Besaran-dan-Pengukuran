@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakikat Fisika · Kelas X Interaktif</title>
+  <!-- Font & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f9ff;
+      color: #0b1a33;
+      padding: 2rem 1.5rem;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* header */
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #d0e2ff;
+      padding-bottom: 1rem;
+    }
+
+    .header h1 {
+      font-weight: 700;
+      font-size: 2.2rem;
+      background: linear-gradient(145deg, #0b2b5e, #1b4a8b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+
+    .header .badge {
+      background: #1b4a8b;
+      color: white;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 6px 12px rgba(0, 40, 100, 0.15);
+    }
+
+    .subhead {
+      background: white;
+      border-radius: 24px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.2rem;
+      box-shadow: 0 8px 20px rgba(0, 20, 60, 0.06);
+      border-left: 6px solid #2b6bb0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .subhead i {
+      font-size: 2.2rem;
+      color: #1b4a8b;
+    }
+
+    .subhead p {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #1e3a6b;
+      flex: 1;
+    }
+
+    .subhead .quote {
+      font-weight: 400;
+      background: #eef4ff;
+      padding: 0.4rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      color: #1a3f73;
+    }
+
+    /* grid cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.8rem;
+      margin-top: 0.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 1.8rem 1.6rem 2rem;
+      box-shadow: 0 8px 24px rgba(0, 30, 70, 0.06);
+      transition: all 0.2s ease;
+      border: 1px solid #e7efff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(18, 52, 106, 0.10);
+      border-color: #b8d0f0;
+    }
+
+    .card-icon {
+      font-size: 2.4rem;
+      color: #1b4a8b;
+      margin-bottom: 0.8rem;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      margin-bottom: 0.75rem;
+      color: #0a1e3c;
+    }
+
+    .card p {
+      color: #1f3a60;
+      margin-bottom: 1rem;
+      font-weight: 400;
+      flex: 1;
+    }
+
+    .card ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0 1.2rem;
+      color: #1f3a60;
+    }
+
+    .card ul li {
+      margin-bottom: 0.4rem;
+      list-style-type: '✦ ';
+      padding-left: 0.3rem;
+    }
+
+    .card .btn {
+      display: inline-block;
+      background: #e3edff;
+      color: #13418a;
+      font-weight: 600;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      align-self: flex-start;
+      transition: 0.15s;
+      border: 1px solid transparent;
+    }
+
+    .card .btn i {
+      margin-right: 6px;
+    }
+
+    .card .btn:hover {
+      background: #1b4a8b;
+      color: white;
+      border-color: #1b4a8b;
+    }
+
+    .highlight {
+      background: #eef4ff;
+      border-radius: 16px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0 0.8rem;
+      border-left: 4px solid #2b6bb0;
+    }
+
+    .highlight strong {
+      color: #0b2b5e;
+    }
+
+    .sumber {
+      margin-top: 2.5rem;
+      background: #ffffffd9;
+      backdrop-filter: blur(2px);
+      border-radius: 28px;
+      padding: 1.8rem 2rem;
+      border: 1px solid #dbe7fc;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .sumber h4 {
+      font-weight: 600;
+      color: #123a70;
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sumber a {
+      color: #1655a5;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #b3cbea;
+    }
+
+    .sumber a:hover {
+      border-bottom: 2px solid #1b4a8b;
+    }
+
+    .sumber .ref-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.8rem;
+    }
+
+    .ref-list span {
+      background: #f0f6ff;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+    }
+
+    .footer-note {
+      margin-top: 2.8rem;
+      font-size: 0.9rem;
+      color: #42639b;
+      text-align: center;
+      border-top: 1px solid #dbe3f0;
+      padding-top: 1.8rem;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      .header h1 { font-size: 1.8rem; }
+      .subhead { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header -->
+  <div class="header">
+    <h1><i class="fas fa-atom" style="color:#1b4a8b; margin-right: 12px;"></i> Hakikat Fisika</h1>
+    <span class="badge"><i class="fas fa-graduation-cap"></i> Kelas X · Ganjil</span>
+  </div>
+
+  <!-- intro -->
+  <div class="subhead">
+    <i class="fas fa-rocket"></i>
+    <p>Fisika bukan sekadar rumus — ia adalah proses, produk, dan sikap ilmiah. <br> Mari pahami hakikat, ruang lingkup, dan peran fisika dalam kehidupan.</p>
+    <span class="quote"><i class="fas fa-quote-left"></i> Berdasarkan Modul & sumber kredibel</span>
+  </div>
+
+  <!-- grid utama -->
+  <div class="grid">
+
+    <!-- card 1: Hakikat Fisika -->
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-flask"></i></div>
+      <h3>Hakikat Fisika</h3>
+      <p>Fisika sebagai <strong>ilmu</strong> mempelajari gejala alam. Hakikatnya mencakup tiga dimensi:</p>
+      <ul>
+        <li><strong>Proses</strong> — metode ilmiah, eksperimen, pengamatan.</li>
+        <li><strong>Produk</strong> — fakta, konsep, hukum, teori, rumus.</li>
+        <li><strong>Sikap</strong> — rasa ingin tahu, jujur, objektif, disiplin.</li>
+      </ul>
+      <div class="highlight">
+        <i class="fas fa-lightbulb" style="color:#f5b342;"></i> 
+        <strong>Sikap ilmiah</strong> · percaya diri, mau mendengar, kritis.
+      </div>
+      <a href="#" class="btn" onclick="alert('Hakikat fisika: proses, produk, sikap (modul hlm. 4)')"><i class="fas fa-book-open"></i> Baca di modul</a>
+    </div>
+
+    <!-- card 2: Ruang lingkup & cabang -->
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-arrows-split-up-and-left"></i></div>
+      <h3>Ruang Lingkup</h3>
+      <p><strong>Fisika Klasik</strong> (Newton, Galileo, Faraday) · <strong>Fisika Modern</strong> (Einstein, Planck, Bohr, Schrödinger).</p>
+      <ul>
+        <li><strong>Klasik</strong> : mekanika, termodinamika, optika, elektromagnetik.</li>
+        <li><strong>Modern</strong> : relativitas, kuantum, fisika atom/nuklir, partikel, plasma.</li>
+      </ul>
+      <p style="font-size:0.95rem; background:#f4f9ff; padding:0.5rem 0.8rem; border-radius:20px;">
+        <i class="fas fa-user-astronaut"></i> Tokoh: Newton · Einstein · Maxwell · Bohr
+      </p>
+      <a href="#" class="btn" onclick="alert('Fisika klasik & modern — lihat tabel di modul hal.5-8')"><i class="fas fa-microscope"></i> Tokoh & cabang</a>
+    </div>
+
+    <!-- card 3: Hubungan lintas mapel & profesi -->
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-sitemap"></i></div>
+      <h3>Hubungan & Profesi</h3>
+      <p>Fisika terhubung dengan <strong>kimia, biologi, matematika, geografi, teknologi</strong>. Juga membuka jalan ke profesi masa depan:</p>
+      <ul>
+        <li><i class="fas fa-code"></i> Quantum Programmer</li>
+        <li><i class="fas fa-cloud-sun"></i> Climate Engineer</li>
+        <li><i class="fas fa-vr-cardboard"></i> Metaverse Developer</li>
+        <li><i class="fas fa-dna"></i> Bio-Nano Engineer</li>
+        <li><i class="fas fa-rocket"></i> Space Tourism Expert</li>
+      </ul>
+      <div style="background:#e3edff; border-radius:30px; padding:0.2rem 1rem; font-size:0.85rem; margin-top:0.3rem;">
+        <i class="fas fa-graduation-cap"></i> Sumber: modul hlm. 10-11
+      </div>
+      <a href="#" class="btn" onclick="alert('Lihat Tabel 1.5 — profesi masa depan berbasis fisika')"><i class="fas fa-briefcase"></i> Profesi & jurusan</a>
+    </div>
+
+    <!-- card 4: Besaran & pengukuran (dasar) -->
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-ruler"></i></div>
+      <h3>Besaran & Satuan</h3>
+      <p><strong>7 besaran pokok</strong> : panjang (m), massa (kg), waktu (s), arus (A), suhu (K), intensitas cahaya (cd), jumlah zat (mol).</p>
+      <p><strong>Besaran turunan</strong> : kecepatan, gaya, usaha, tekanan, dll.</p>
+      <div style="background:#f0f7ff; border-radius:18px; padding:0.8rem 1rem; margin:0.8rem 0;">
+        <i class="fas fa-exclamation-triangle" style="color:#c47b2b;"></i> 
+        <strong>Dimensi</strong> · [L], [M], [T] … analisis dimensi penting untuk cek rumus.
+      </div>
+      <a href="#" class="btn" onclick="alert('Besaran pokok & turunan, dimensi — modul hal.12-18')"><i class="fas fa-calculator"></i> Pelajari dimensi</a>
+    </div>
+
+    <!-- card 5: Pengukuran & alat ukur -->
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-microscope"></i></div>
+      <h3>Pengukuran & Alat Ukur</h3>
+      <ul>
+        <li><strong>Panjang</strong> : mistar (0,5 mm), jangka sorong (0,005 cm), mikrometer (0,0005 cm).</li>
+        <li><strong>Massa</strong> : neraca Ohaus, analitik.</li>
+        <li><strong>Waktu</strong> : stopwatch analog/digital.</li>
+        <li><strong>Listrik</strong> : basicmeter, multimeter, amperemeter, voltmeter.</li>
+      </ul>
+      <p><i class="fas fa-rule"></i> Ketidakpastian = ½ × skala terkecil (tunggal).</p>
+      <a href="#" class="btn" onclick="alert('Alat ukur & ketelitian — modul hal.24-29')"><i class="fas fa-ruler-combined"></i> Detail alat ukur</a>
+    </div>
+
+    <!-- card 6: Angka penting & notasi ilmiah -->
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-superscript"></i></div>
+      <h3>Angka Penting & Notasi</h3>
+      <p>Aturan angka penting: semua angka bukan nol AP, nol di antara AP, nol di belakang koma AP.</p>
+      <p><strong>Notasi ilmiah</strong> : <em>a × 10<sup>n</sup></em> dengan 1 ≤ a < 10.</p>
+      <div class="highlight" style="background:#dce8fa;">
+        <i class="fas fa-pen-fancy"></i> Contoh: 0,0000435 km = 4,35×10⁻⁵ km (3 AP)
+      </div>
+      <a href="#" class="btn" onclick="alert('Aturan angka penting & notasi ilmiah — modul hal.37-41')"><i class="fas fa-calculator"></i> Latihan angka penting</a>
+    </div>
+
+  </div> <!-- end grid -->
+
+  <!-- sumber kredibel & modul -->
+  <div class="sumber">
+    <h4><i class="fas fa-book"></i> Sumber & referensi kredibel</h4>
+    <div class="ref-list">
+      <span><i class="fas fa-check-circle" style="color:#1f8b4c;"></i> Modul Fisika Kelas X (SMAK Kolese Santo Yusup) — Bab 1</span>
+      <span><i class="fas fa-globe"></i> <a href="#" onclick="alert('BIP · Badan Standardisasi Nasional')">BSN · Satuan SI</a></span>
+      <span><i class="fas fa-university"></i> <a href="#" onclick="alert('Kemdikbud · Fisika Dasar')">Kemdikbud RI</a></span>
+      <span><i class="fas fa-flask"></i> <a href="#" onclick="alert('Physics Classroom · Nature of Science')">Physics Classroom</a></span>
+      <span><i class="fas fa-atom"></i> <a href="#" onclick="alert('NASA · Pengukuran & satuan')">NASA · Measurement</a></span>
+    </div>
+    <div style="margin-top: 0.8rem; font-size: 0.9rem; background: #eaf1fd; padding: 0.5rem 1rem; border-radius: 40px;">
+      <i class="fas fa-info-circle"></i> Berdasarkan modul hlm. 3–23 (Besaran & Pengukuran) serta sumber terpercaya.
+    </div>
+    <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 10px;">
+      <span style="background:#d4e2fc; padding:0.2rem 1.2rem; border-radius:30px;"><i class="fas fa-flask"></i> Hakikat fisika (hlm.4)</span>
+      <span style="background:#d4e2fc; padding:0.2rem 1.2rem; border-radius:30px;"><i class="fas fa-bolt"></i> Fisika klasik & modern (hlm.5-8)</span>
+      <span style="background:#d4e2fc; padding:0.2rem 1.2rem; border-radius:30px;"><i class="fas fa-chart-line"></i> Dimensi & konversi (hlm.17-23)</span>
+    </div>
+  </div>
+
+  <!-- catatan akhir -->
+  <div class="footer-note">
+    <i class="fas fa-robot"></i> Media interaktif · untuk pembelajaran mandiri ·  <i class="fas fa-rotate-left"></i> Klik tombol untuk melihat ringkasan dari modul.
+    <br><span style="font-size:0.8rem; opacity:0.7;">Sumber: Modul Fisika Kelas X Semester Ganjil · SMAK Kolese Santo Yusup Malang</span>
+  </div>
+
+</div>
+<!-- container end -->
+
+<script>
+  // tidak ada fungsi khusus, hanya tombol alert sebagai demo interaktif.
+  // semuanya sudah inline onclick.
+</script>
+
+</body>
+</html>
