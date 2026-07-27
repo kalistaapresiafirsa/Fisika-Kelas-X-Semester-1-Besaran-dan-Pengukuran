@@ -220,36 +220,6 @@
             margin-top: 8px;
         }
 
-        .intro-section {
-            background: linear-gradient(135deg, rgba(255, 138, 101, 0.10), rgba(129, 212, 250, 0.10));
-            border-radius: 20px;
-            padding: 16px 24px;
-            margin-bottom: 28px;
-            border: 1px solid rgba(255, 138, 101, 0.12);
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .intro-section .emoji-big {
-            font-size: 2.2rem;
-        }
-
-        .intro-section p {
-            font-size: 1rem;
-            color: #37474f;
-            line-height: 1.6;
-            flex: 1;
-        }
-
-        .intro-section p strong {
-            background: linear-gradient(135deg, #ff8a65, #ff6e40);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
         .tabs-wrapper {
             display: flex;
             gap: 12px;
@@ -554,34 +524,37 @@
             color: #37474f;
         }
 
-        .product-card .continuity-arrow {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #ff6e40;
-            margin: 4px 0;
-        }
-
-        /* ----- SPECIAL: CONTINUITY DEMO ----- */
-        .continuity-demo {
+        /* ----- CONTINUITY SECTION (di bawah produk) ----- */
+        .continuity-section {
+            margin-top: 28px;
+            padding: 24px 20px;
             background: linear-gradient(135deg, #fff8f5, #fff3e0);
             border-radius: 20px;
-            padding: 20px;
-            margin: 20px 0 24px 0;
             border: 2px solid rgba(255, 138, 101, 0.2);
         }
 
-        .continuity-demo .title {
+        .continuity-section .section-title {
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: #1a2634;
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 14px;
+            gap: 12px;
+            margin-bottom: 16px;
         }
 
-        .continuity-demo .title i {
+        .continuity-section .section-title i {
             color: #ff6e40;
+            font-size: 1.4rem;
+        }
+
+        .continuity-section .section-title .badge-cont {
+            font-size: 0.65rem;
+            background: rgba(255, 138, 101, 0.15);
+            padding: 4px 14px;
+            border-radius: 100px;
+            color: #e65100;
+            font-weight: 600;
         }
 
         .continuity-flow {
@@ -595,7 +568,7 @@
         .continuity-flow .step {
             background: white;
             border-radius: 14px;
-            padding: 10px 14px;
+            padding: 12px 16px;
             min-width: 100px;
             flex: 1 0 auto;
             max-width: 150px;
@@ -606,20 +579,20 @@
         }
 
         .continuity-flow .step:hover {
-            transform: translateY(-4px) scale(1.02);
+            transform: translateY(-4px) scale(1.03);
             border-color: #ff6e40;
             box-shadow: 0 8px 24px rgba(255, 110, 64, 0.15);
         }
 
         .continuity-flow .step .step-icon {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             display: block;
             margin-bottom: 2px;
         }
 
         .continuity-flow .step .step-label {
             font-weight: 700;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             color: #1a2634;
             display: block;
         }
@@ -636,10 +609,20 @@
             display: inline-block;
             font-size: 0.5rem;
             background: rgba(255, 138, 101, 0.1);
-            padding: 1px 8px;
+            padding: 1px 10px;
             border-radius: 100px;
             color: #e65100;
             margin-top: 3px;
+        }
+
+        .continuity-flow .step.highlight-step {
+            border-color: #ff6e40;
+            background: linear-gradient(135deg, #fff8f5, #fff3e0);
+        }
+
+        .continuity-flow .step.highlight-step .step-badge {
+            background: rgba(255, 110, 64, 0.2);
+            color: #ff6e40;
         }
 
         .continuity-flow .arrow {
@@ -647,6 +630,26 @@
             color: #ff8a65;
             font-weight: 300;
             flex-shrink: 0;
+        }
+
+        .continuity-note {
+            margin-top: 14px;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 12px;
+            font-size: 0.85rem;
+            color: #37474f;
+            text-align: center;
+            border: 1px dashed rgba(255, 138, 101, 0.2);
+        }
+
+        .continuity-note i {
+            color: #ff6e40;
+            margin-right: 8px;
+        }
+
+        .continuity-note strong {
+            color: #1a2634;
         }
 
         .process-timeline {
@@ -891,7 +894,7 @@
             .tab-btn { padding: 12px; }
             .panel h2 { font-size: 1.3rem; }
             .visual-demo .demo-grid { grid-template-columns: 1fr 1fr; }
-            .continuity-flow .step { min-width: 70px; max-width: 120px; padding: 8px 10px; }
+            .continuity-flow .step { min-width: 80px; max-width: 120px; padding: 10px 12px; }
             .continuity-flow .arrow { font-size: 1rem; }
         }
 
@@ -907,9 +910,10 @@
             .header .tagline { font-size: 0.7rem; padding: 6px 14px; }
             .simulation-box { flex-direction: column; text-align: center; }
             .welcome-card .stats { flex-direction: column; }
-            .continuity-flow .step { min-width: 60px; max-width: 100px; padding: 6px 8px; }
+            .continuity-flow .step { min-width: 60px; max-width: 90px; padding: 6px 8px; }
             .continuity-flow .step .step-example { font-size: 0.5rem; }
-            .continuity-flow .arrow { font-size: 0.8rem; }
+            .continuity-flow .step .step-icon { font-size: 1.2rem; }
+            .continuity-flow .arrow { font-size: 0.7rem; }
         }
     </style>
 </head>
@@ -934,7 +938,7 @@
             <h3>Apa Itu <span class="highlight">Fisika</span>?</h3>
             <p>
                 Fisika adalah ilmu yang mempelajari gejala alam, dari yang paling kecil kayak atom sampai yang sebesar galaksi. 
-                Fisika mencoba ngertiin <strong>gimana alam semesta ini bekerja</strong>, kenapa benda jatuh, kenapa langit biru, 
+                Fisika mencoba ngertiin <strong>gimana alam semesta ini bekerja</strong> — kenapa benda jatuh, kenapa langit biru, 
                 sampai gimana cara kerja HP yang lagi kamu pegang sekarang.
             </p>
             <div class="tag-list">
@@ -986,7 +990,7 @@
             <h3>Kenapa Belajar <span class="highlight">Fisika</span> Penting?</h3>
             <p>
                 Fisika ngajarin kamu <strong>berpikir logis, kritis, dan sistematis</strong>. 
-                Semua teknologi yang kamu pake sehari-hari mulai dari <strong>HP, internet, pesawat, sampai roket</strong>,
+                Semua teknologi yang kamu pake sehari-hari — dari <strong>HP, internet, pesawat, sampai roket</strong> — 
                 semua berdasar pada prinsip fisika. Fisika juga bisa membuka <strong>banyak peluang karir</strong> 
                 yang keren di masa depan!
             </p>
@@ -1041,65 +1045,6 @@
                 </button>
             </div>
 
-            <!-- ===== CONTINUITY DEMO: FAKTA → FORMULA ===== -->
-            <div class="continuity-demo">
-                <div class="title">
-                    <i class="fas fa-link"></i> 
-                    Contoh Berkesinambungan: <span style="background: linear-gradient(135deg, #ff8a65, #ff6e40); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Gerak Jatuh Bebas</span>
-                    <span style="font-size:0.7rem; background: rgba(255,138,101,0.1); padding:2px 12px; border-radius:100px; color:#e65100; -webkit-text-fill-color:#e65100;">Dari Fakta → Formula</span>
-                </div>
-                <div class="continuity-flow">
-                    <div class="step">
-                        <span class="step-icon">🍎</span>
-                        <span class="step-label">Fakta</span>
-                        <span class="step-example">"Apel jatuh ke bawah"</span>
-                        <span class="step-badge">Observasi</span>
-                    </div>
-                    <span class="arrow">→</span>
-                    <div class="step">
-                        <span class="step-icon">🧲</span>
-                        <span class="step-label">Konsep</span>
-                        <span class="step-example">Gravitasi</span>
-                        <span class="step-badge">Ide</span>
-                    </div>
-                    <span class="arrow">→</span>
-                    <div class="step">
-                        <span class="step-icon">⚡</span>
-                        <span class="step-label">Prinsip</span>
-                        <span class="step-example">Energi potensial → kinetik</span>
-                        <span class="step-badge">Sebab-akibat</span>
-                    </div>
-                    <span class="arrow">→</span>
-                    <div class="step">
-                        <span class="step-icon">📜</span>
-                        <span class="step-label">Hukum</span>
-                        <span class="step-example">F = m·a</span>
-                        <span class="step-badge">Newton</span>
-                    </div>
-                    <span class="arrow">→</span>
-                    <div class="step">
-                        <span class="step-icon">🧠</span>
-                        <span class="step-label">Teori</span>
-                        <span class="step-example">Relativitas Umum</span>
-                        <span class="step-badge">Einstein</span>
-                    </div>
-                    <span class="arrow">→</span>
-                    <div class="step">
-                        <span class="step-icon">🧊</span>
-                        <span class="step-label">Model</span>
-                        <span class="step-example">Gerak Parabola</span>
-                        <span class="step-badge">Visual</span>
-                    </div>
-                    <span class="arrow">→</span>
-                    <div class="step" style="border-color: #ff6e40; background: linear-gradient(135deg, #fff8f5, #fff3e0);">
-                        <span class="step-icon">📐</span>
-                        <span class="step-label">Formula</span>
-                        <span class="step-example">v = g·t</span>
-                        <span class="step-badge" style="background:rgba(255,110,64,0.2); color:#ff6e40;">Kuantitatif</span>
-                    </div>
-                </div>
-            </div>
-
             <!-- ===== VISUAL DEMO - PRODUK FISIKA ===== -->
             <div class="visual-demo">
                 <div class="demo-title">
@@ -1107,10 +1052,9 @@
                     Contoh Nyata Produk Fisika
                 </div>
                 <div class="demo-grid">
-                    <!-- 1. Pelangi - Pembiasan Cahaya (KONSEP) -->
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://kumparan.com/ragam-info/5-contoh-pembiasan-cahaya-dalam-kehidupan-sehari-hari-21fHhqFvwdo" alt="Pelangi - contoh pembiasan cahaya">
+                            <img src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=400&h=200&fit=crop&crop=center" alt="Pelangi - contoh pembiasan cahaya">
                         </div>
                         <div class="info">
                             <div class="label">Pelangi</div>
@@ -1119,10 +1063,9 @@
                         </div>
                     </div>
 
-                    <!-- 2. Model Atom Mekanika Kuantum (MODEL) -->
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://id.wikipedia.org/wiki/Mekanika_kuantum" alt="Model atom mekanika kuantum">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Atom_model.svg/800px-Atom_model.svg.png" alt="Model atom mekanika kuantum">
                         </div>
                         <div class="info">
                             <div class="label">Model Atom Kuantum</div>
@@ -1131,10 +1074,9 @@
                         </div>
                     </div>
 
-                    <!-- 3. Konstruksi Bangunan - Hukum Newton (HUKUM) -->
                     <div class="demo-card">
                         <div class="image-wrap">
-                            <img src="https://www.google.com/imgres?q=train%20buat%20bangun%20gedung&imgurl=https%3A%2F%2Fmitech-ndt.co.id%2Fwp-content%2Fuploads%2F2020%2F09%2FAlat-Berat-Konstruksi-Dalam-Pembangunan-Gedung.jpg&imgrefurl=https%3A%2F%2Fmitech-ndt.co.id%2Falat-berat-konstruksi-dalam-pembangunan-gedung%2F&docid=tkEq6_oRvsjZcM&tbnid=5BIYjs2g6djZ5M&vet=12ahUKEwiL4J6U5PKVAxXHkeEIHfB8B5gQnPAOegQIPBAA..i&w=623&h=350&hcb=2&ved=2ahUKEwiL4J6U5PKVAxXHkeEIHfB8B5gQnPAOegQIPBAA" alt="Konstruksi bangunan - contoh hukum Newton">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=200&fit=crop&crop=center" alt="Konstruksi bangunan - contoh hukum Newton">
                         </div>
                         <div class="info">
                             <div class="label">Konstruksi Bangunan</div>
@@ -1154,7 +1096,7 @@
                     <h3>Fakta</h3>
                     <p>Pernyataan objektif berdasarkan pengamatan langsung yang bisa dibuktikan.</p>
                     <div class="example"><i class="fas fa-check-circle"></i> "Air mendidih di suhu 100°C di permukaan laut."</div>
-                    <div class="highlight-box"><i class="fas fa-apple-alt"></i> <strong>Contoh Jatuh Bebas:</strong> "Apel yang jatuh dari pohon selalu bergerak ke bawah menuju tanah." Ini adalah fakta yang bisa diamati siapa saja.</div>
+                    <div class="highlight-box"><i class="fas fa-apple-alt"></i> <strong>Jatuh Bebas:</strong> "Apel yang jatuh dari pohon selalu bergerak ke bawah menuju tanah."</div>
                 </div>
 
                 <!-- 2. KONSEP -->
@@ -1164,7 +1106,7 @@
                     <h3>Konsep</h3>
                     <p>Ide abstrak yang nyambungin fakta-fakta jadi pola pikir yang bermakna.</p>
                     <div class="example"><i class="fas fa-check-circle"></i> Konsep <strong>gaya</strong>, <strong>energi</strong>, <strong>massa</strong>.</div>
-                    <div class="highlight-box"><i class="fas fa-apple-alt"></i> <strong>Contoh Jatuh Bebas:</strong> <strong>Gravitasi</strong> — gaya tarik menarik antara dua benda bermassa. Bumi menarik apel sehingga jatuh ke bawah. Ini menghubungkan fakta "apel jatuh" dengan penyebabnya.</div>
+                    <div class="highlight-box"><i class="fas fa-apple-alt"></i> <strong>Jatuh Bebas:</strong> <strong>Gravitasi</strong> — gaya tarik antara dua benda bermassa. Bumi menarik apel sehingga jatuh.</div>
                 </div>
 
                 <!-- 3. PRINSIP -->
@@ -1174,7 +1116,7 @@
                     <h3>Prinsip</h3>
                     <p>Hubungan sebab-akibat yang ngejelasin gimana konsep-konsep saling terkait.</p>
                     <div class="example"><i class="fas fa-check-circle"></i> "Makin besar gaya, makin besar percepatan."</div>
-                    <div class="highlight-box"><i class="fas fa-apple-alt"></i> <strong>Contoh Jatuh Bebas:</strong> "Semakin tinggi posisi benda, semakin besar energi potensialnya, sehingga saat jatuh kecepatannya semakin besar." Ini menghubungkan ketinggian, energi, dan kecepatan.</div>
+                    <div class="highlight-box"><i class="fas fa-apple-alt"></i> <strong>Jatuh Bebas:</strong> "Semakin tinggi posisi benda, semakin besar energi potensialnya → saat jatuh kecepatan semakin besar."</div>
                 </div>
 
                 <!-- 4. HUKUM -->
@@ -1185,11 +1127,11 @@
                     <p>Generalisasi universal yang udah teruji berkali-kali, biasanya dalam bentuk rumus.</p>
                     <div class="example"><i class="fas fa-check-circle"></i> Hukum I Newton, Hukum Kekekalan Energi.</div>
                     <div class="highlight-box">
-                        <i class="fas fa-apple-alt"></i> <strong>Contoh Jatuh Bebas:</strong>
+                        <i class="fas fa-apple-alt"></i> <strong>Jatuh Bebas:</strong>
                         <ul>
                             <li><strong>Hukum II Newton:</strong> F = m·a</li>
                             <li><strong>Hukum Gravitasi Newton:</strong> F = G·(M·m)/r²</li>
-                            <li><strong>Hukum Kekekalan Energi:</strong> E<sub>potensial</sub> = E<sub>kinetik</sub></li>
+                            <li><strong>Hukum Kekekalan Energi:</strong> E<sub>p</sub> = E<sub>k</sub></li>
                         </ul>
                     </div>
                 </div>
@@ -1201,7 +1143,7 @@
                     <h3>Teori</h3>
                     <p>Penjelasan komprehensif yang didukung banyak bukti dan bisa ngeprediksi fenomena baru.</p>
                     <div class="example"><i class="fas fa-check-circle"></i> Teori Relativitas Einstein.</div>
-                    <div class="highlight-box"><i class="fas fa-apple-alt"></i> <strong>Contoh Jatuh Bebas:</strong> <strong>Teori Gravitasi Einstein (Relativitas Umum):</strong> Gravitasi bukan gaya, melainkan kelengkungan ruang-waktu akibat massa. Ini menjelaskan mengapa apel jatuh — karena massa Bumi melengkungkan ruang di sekitarnya.</div>
+                    <div class="highlight-box"><i class="fas fa-apple-alt"></i> <strong>Jatuh Bebas:</strong> <strong>Teori Gravitasi Einstein (Relativitas Umum):</strong> Gravitasi adalah kelengkungan ruang-waktu akibat massa.</div>
                 </div>
 
                 <!-- 6. MODEL -->
@@ -1211,7 +1153,7 @@
                     <h3>Model</h3>
                     <p>Gambaran visual atau matematis dari suatu fenomena biar gampang dipahami.</p>
                     <div class="example"><i class="fas fa-check-circle"></i> Model Atom Bohr.</div>
-                    <div class="highlight-box"><i class="fas fa-apple-alt"></i> <strong>Contoh Jatuh Bebas:</strong> <strong>Model gerak parabola:</strong> Benda yang dijatuhkan dengan kecepatan horizontal akan membentuk lintasan melengkung (parabola). Model ini membantu memvisualisasikan gerak jatuh dalam 2 dimensi.</div>
+                    <div class="highlight-box"><i class="fas fa-apple-alt"></i> <strong>Jatuh Bebas:</strong> <strong>Model gerak parabola:</strong> Benda dengan kecepatan horizontal membentuk lintasan melengkung.</div>
                 </div>
 
                 <!-- 7. RUMUS / FORMULA -->
@@ -1222,14 +1164,88 @@
                     <p>Ekspresi matematis yang bisa dipake buat ngitung dan prediksi secara kuantitatif.</p>
                     <div class="example"><i class="fas fa-check-circle"></i> <strong>F = m·a</strong>, E = mc²</div>
                     <div class="highlight-box">
-                        <i class="fas fa-apple-alt"></i> <strong>Contoh Jatuh Bebas:</strong>
+                        <i class="fas fa-apple-alt"></i> <strong>Jatuh Bebas:</strong>
                         <ul>
                             <li><strong>v = g·t</strong> (kecepatan setelah t detik)</li>
                             <li><strong>h = ½·g·t²</strong> (ketinggian setelah t detik)</li>
                             <li><strong>g = 9,8 m/s²</strong> (percepatan gravitasi Bumi)</li>
-                            <li><strong>v² = 2·g·h</strong> (kecepatan saat jatuh dari ketinggian h)</li>
+                            <li><strong>v² = 2·g·h</strong> (kecepatan dari ketinggian h)</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+
+            <!-- ===== CONTINUITY SECTION: Di BAWAH PRODUK ===== -->
+            <div class="continuity-section">
+                <div class="section-title">
+                    <i class="fas fa-link"></i>
+                    <span>Contoh Berkesinambungan: <span style="background: linear-gradient(135deg, #ff8a65, #ff6e40); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Gerak Jatuh Bebas</span></span>
+                    <span class="badge-cont">Dari Fakta → Formula</span>
+                </div>
+
+                <div class="continuity-flow">
+                    <div class="step">
+                        <span class="step-icon">🍎</span>
+                        <span class="step-label">Fakta</span>
+                        <span class="step-example">"Apel jatuh ke bawah"</span>
+                        <span class="step-badge">Observasi</span>
+                    </div>
+                    <span class="arrow">→</span>
+
+                    <div class="step">
+                        <span class="step-icon">🧲</span>
+                        <span class="step-label">Konsep</span>
+                        <span class="step-example">Gravitasi</span>
+                        <span class="step-badge">Ide</span>
+                    </div>
+                    <span class="arrow">→</span>
+
+                    <div class="step">
+                        <span class="step-icon">⚡</span>
+                        <span class="step-label">Prinsip</span>
+                        <span class="step-example">Energi potensial → kinetik</span>
+                        <span class="step-badge">Sebab-akibat</span>
+                    </div>
+                    <span class="arrow">→</span>
+
+                    <div class="step">
+                        <span class="step-icon">📜</span>
+                        <span class="step-label">Hukum</span>
+                        <span class="step-example">F = m·a</span>
+                        <span class="step-badge">Newton</span>
+                    </div>
+                    <span class="arrow">→</span>
+
+                    <div class="step">
+                        <span class="step-icon">🧠</span>
+                        <span class="step-label">Teori</span>
+                        <span class="step-example">Relativitas Umum</span>
+                        <span class="step-badge">Einstein</span>
+                    </div>
+                    <span class="arrow">→</span>
+
+                    <div class="step">
+                        <span class="step-icon">🧊</span>
+                        <span class="step-label">Model</span>
+                        <span class="step-example">Gerak Parabola</span>
+                        <span class="step-badge">Visual</span>
+                    </div>
+                    <span class="arrow">→</span>
+
+                    <div class="step highlight-step">
+                        <span class="step-icon">📐</span>
+                        <span class="step-label">Formula</span>
+                        <span class="step-example">v = g·t</span>
+                        <span class="step-badge">Kuantitatif</span>
+                    </div>
+                </div>
+
+                <div class="continuity-note">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>Alur berpikir ilmiah:</strong> 
+                    Dari pengamatan (<strong>Fakta</strong>) → muncul ide (<strong>Konsep</strong>) → hubungan sebab-akibat (<strong>Prinsip</strong>) → 
+                    generalisasi universal (<strong>Hukum</strong>) → penjelasan mendalam (<strong>Teori</strong>) → visualisasi (<strong>Model</strong>) → 
+                    perhitungan kuantitatif (<strong>Formula</strong>). Semua saling berkesinambungan!
                 </div>
             </div>
         </div>
